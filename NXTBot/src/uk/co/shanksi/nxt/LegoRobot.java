@@ -1062,8 +1062,8 @@ public class LegoRobot implements SharedConstants
     if (!isConnected)
       return false;
 
-    if (!fileExists(filename))
-      return false;
+  //  if (!fileExists(filename))
+  //    return false;
 
     byte[] request =
     {
