@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@android:style/Theme.Light.NoTitleBar"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#ffffff"
+	android:orientation="vertical">
+
+	<SurfaceView
+		android:id="@+id/preView"
+		android:layout_width="fill_parent"
+		android:layout_height="150dip"/>
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:paddingLeft="10dip">
+
+		<TextView
+			android:id="@+id/passlabel"
+			android:layout_width="80dip"
+			android:layout_height="wrap_content"
+			android:text="Password"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:textColor="#000000"/>
+
+		<EditText
+			android:id="@+id/password"
+			android:layout_width="50dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.42"
+			android:ems="8"
+			android:inputType="textPassword"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:paddingLeft="10dip">
+
+		<TextView
+			android:id="@+id/retypeLabel"
+			android:layout_width="80dip"
+			android:layout_height="wrap_content"
+			android:paddingRight="10dip"
+			android:text="Retype"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:textColor="#000000"/>
+
+		<EditText
+			android:id="@+id/retype"
+			android:layout_width="50dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:ems="10"
+			android:inputType="textPassword"/>
+
+	</LinearLayout>
+
+	<Button
+		android:id="@+id/saveButton"
+		android:layout_width="150dip"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:text="Save"/>
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<CheckBox
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"/>
+
+		<ToggleButton
+			android:id="@+id/httpToggle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:width="110dp"
+			android:textOff="HTTP"/>
+
+		<ToggleButton
+			android:id="@+id/bluetoothToggle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:width="110dp"
+			android:textOff="Bluetooth"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal">
+
+		<Button
+			android:layout_height="wrap_content"
+			style="?android:attr/buttonStyleSmall"
+			android:text="&lt;"
+			android:layout_width="wrap_content"
+			android:id="@+id/leftButton"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			style="?android:attr/buttonStyleSmall"
+			android:text="^"
+			android:layout_width="wrap_content"
+			android:id="@+id/fwdButton"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			style="?android:attr/buttonStyleSmall"
+			android:text="&gt;"
+			android:layout_width="wrap_content"
+			android:id="@+id/rightButton"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+

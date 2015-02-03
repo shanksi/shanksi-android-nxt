@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_nxtbotguard" default="compile.module.nxtbotguard">
+  <dirname property="module.nxtbotguard.basedir" file="${ant.file.module_nxtbotguard}"/>
+  
+  <property name="module.jdk.home.nxtbotguard" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.nxtbotguard" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.nxtbotguard" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.nxtbotguard" value="-encoding UTF-8 -source 1.6 ${compiler.args}"/>
+  
+  <property name="nxtbotguard.output.dir" value="undefined"/>
+  <property name="nxtbotguard.testoutput.dir" value="undefined"/>
+  
+  <path id="nxtbotguard.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="nxtbotguard.module.production.classpath">
+    <path refid="${module.jdk.classpath.nxtbotguard}"/>
+  </path>
+  
+  <path id="nxtbotguard.runtime.production.module.classpath"/>
+  
+  <path id="nxtbotguard.module.classpath">
+    <path refid="${module.jdk.classpath.nxtbotguard}"/>
+  </path>
+  
+  <path id="nxtbotguard.runtime.module.classpath"/>
+  
+  
+  <patternset id="excluded.from.module.nxtbotguard">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.nxtbotguard">
+    <patternset refid="excluded.from.module.nxtbotguard"/>
+  </patternset>
+  
+  
+  <target name="compile.module.nxtbotguard" depends="compile.module.nxtbotguard.production,compile.module.nxtbotguard.tests" description="Compile module NXTBotGuard"/>
+  
+  <target name="compile.module.nxtbotguard.production" depends="register.custom.compilers" description="Compile module NXTBotGuard; production classes"/>
+  
+  <target name="compile.module.nxtbotguard.tests" depends="register.custom.compilers,compile.module.nxtbotguard.production" description="compile module NXTBotGuard; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.nxtbotguard" description="cleanup module">
+    <delete dir="${nxtbotguard.output.dir}"/>
+    <delete dir="${nxtbotguard.testoutput.dir}"/>
+  </target>
+</project>
