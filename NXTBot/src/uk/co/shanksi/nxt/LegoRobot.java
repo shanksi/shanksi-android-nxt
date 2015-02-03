@@ -1285,7 +1285,7 @@ public class LegoRobot implements SharedConstants
    * Calls Thread.sleep(10) to be used in narrow loops.
    * @return true, if the up button was clicked or the connection in not established
    */
-  public boolean isUpHit()
+/*  public boolean isUpHit()
   {
  //   Tools.delay(10);
     if (!isConnected)
@@ -1294,14 +1294,14 @@ public class LegoRobot implements SharedConstants
     if (pressed)
       buttonID = 0;
     return pressed;
-  }
+  }*/
 
   /**
    * Returns true, if the DOWN button was the last button hit since
    * the last call of this method. On return, the button hit is cleared.
    * Calls Thread.sleep(10) to be used in narrow loops.
    * @return true, if the up button was clicked or the connection in not established
-   */
+   *
   public boolean isDownHit()
   {
  //   Tools.delay(10);
@@ -1312,13 +1312,13 @@ public class LegoRobot implements SharedConstants
       buttonID = 0;
     return pressed;
   }
-
+*/
   /**
    * Returns true, if the LEFT button was the last button hit since
    * the last call of this method. On return, the button hit is cleared.
    * Calls Thread.sleep(10) to be used in narrow loops.
    * @return true, if the up button was clicked or the connection in not established
-   */
+   *
   public boolean isLeftHit()
   {
 //    Tools.delay(10);
@@ -1329,13 +1329,13 @@ public class LegoRobot implements SharedConstants
       buttonID = 0;
     return pressed;
   }
-
+*/
   /**
    * Returns true, if the RIGHT button was the last button hit since
    * the last call of this method. On return, the button hit is cleared.
    * Calls Thread.sleep(10) to be used in narrow loops.
    * @return true, if the up button was clicked or the connection in not established
-   */
+   *
   public boolean isRightHit()
   {
 //    Tools.delay(10);
@@ -1346,13 +1346,13 @@ public class LegoRobot implements SharedConstants
       buttonID = 0;
     return pressed;
   }
-
+*/
   /**
    * Returns true, if the ENTER button was the last button hit since
    * the last call of this method. On return, the button hit is cleared.
    * Calls Thread.sleep(10) to be used in narrow loops.
    * @return true, if the up button was clicked or the connection in not established
-   */
+   *
   public boolean isEnterHit()
   {
  //   Tools.delay(10);
@@ -1363,13 +1363,13 @@ public class LegoRobot implements SharedConstants
       buttonID = 0;
     return pressed;
   }
-
+*/
   /**
    * Returns true, if the ESCAPE button was the last button hit since
    * the last call of this method. On return, the button hit is cleared.
    * Calls Thread.sleep(10) to be used in narrow loops.
    * @return true, if the up button was clicked or the connection in not established
-   */
+   *
   public boolean isEscapeHit()
   {
  //   Tools.delay(10);
@@ -1379,7 +1379,7 @@ public class LegoRobot implements SharedConstants
     if (pressed)
       buttonID = 0;
     return pressed;
-  }
+  }*/
 
   /**
    * Returns the current state of the button listener thread.
