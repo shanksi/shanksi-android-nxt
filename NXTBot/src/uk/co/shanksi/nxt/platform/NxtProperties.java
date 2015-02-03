@@ -55,9 +55,9 @@ public class NxtProperties extends Properties
       if (!pFile.isFile())  // Search in distributed properties file
       {
         is = getClass().getClassLoader().getResourceAsStream(propertiesResourcePath);
-        if (is == null)
+        /*if (is == null)
           new ShowError("Could not find property file '" + propFile + "'");
-        else
+        else*/
           propLocation = 3;
       }
       else
@@ -74,7 +74,7 @@ public class NxtProperties extends Properties
     }
     catch (IOException ex)
     {
-      new ShowError("Could not read property file '" + propFile + "'");
+  //    new ShowError("Could not read property file '" + propFile + "'");
     }
   }
 
@@ -114,8 +114,8 @@ public class NxtProperties extends Properties
     String value = getProperty(key);
     if (value == null)
     {
-      new ShowError("Property '" + key +
-        "' not found in file '" + propFile + "'");
+  //    new ShowError("Property '" + key +
+  //      "' not found in file '" + propFile + "'");
       return "";
     }
     return value;
@@ -133,8 +133,8 @@ public class NxtProperties extends Properties
     String value = getProperty(key);
     if (value == null)
     {
-      new ShowError("Property '" + key +
-        "' not found in file '" + propFile + "'");
+  //    new ShowError("Property '" + key +
+   //     "' not found in file '" + propFile + "'");
       return 0;
     }
     int intValue;
@@ -144,8 +144,8 @@ public class NxtProperties extends Properties
     }
     catch (NumberFormatException ex)
     {
-      new ShowError("Illegal integer format of property '" + key +
-        "' in file '" + propFile + "'");
+   //   new ShowError("Illegal integer format of property '" + key +
+   //     "' in file '" + propFile + "'");
       return 0;
     }
     return intValue;
@@ -163,8 +163,8 @@ public class NxtProperties extends Properties
     String value = getProperty(key);
     if (value == null)
     {
-      new ShowError("Property '" + key +
-        "' not found in file '" + propFile + "'");
+    //  new ShowError("Property '" + key +
+  //      "' not found in file '" + propFile + "'");
       return 0;
     }
     double doubleValue;
@@ -174,8 +174,8 @@ public class NxtProperties extends Properties
     }
     catch (NumberFormatException ex)
     {
-      new ShowError("Illegal double format of property '" + key +
-        "' in file '" + propFile + "'");
+      //new ShowError("Illegal double format of property '" + key +
+       // "' in file '" + propFile + "'");
       return 0;
     }
     return doubleValue;
