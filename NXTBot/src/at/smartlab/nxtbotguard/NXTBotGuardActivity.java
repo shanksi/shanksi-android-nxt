@@ -120,7 +120,7 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
         mySimpleRobot.addPart(m);
         m.setSpeed(5);
         m.forward();
-        delay(1000);
+        //delay(1000);
         m.stop();
 
 

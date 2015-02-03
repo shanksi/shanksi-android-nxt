@@ -130,7 +130,7 @@ public class LegoRobot implements SharedConstants
       isRunning = true;
       
       delay(200);
-      start();
+      //start();
     }
 
     public void run()
@@ -152,12 +152,12 @@ public class LegoRobot implements SharedConstants
     protected void stopThread()
     {
       isRunning = false;
-      interrupt();  // Take it out of delay()
+      //interrupt();  // Take it out of delay()
       try
       {
-        joinX(1000);
+        //joinX(1000);
       }
-      catch (InterruptedException ex)
+      catch (Exception ex)
       {
       }
       //if (LegoRobot.getDebugLevel() >= DEBUG_LEVEL_LOW)
@@ -232,8 +232,8 @@ public class LegoRobot implements SharedConstants
     isKeepAlive = props.getIntValue("KeepAlive") == 1 ? true : false;
     if (connect)
     {
-      if (!connect(true))
-        PlatformTools.putSleep();
+//      if (!connect(true))
+    //    PlatformTools.putSleep();
     }
     if (myClosingMode == ClosingMode.ReleaseOnClose && !isConnected)
       throw new RuntimeException("Java frame disposed");
@@ -276,13 +276,13 @@ public class LegoRobot implements SharedConstants
     }
     catch (NumberFormatException ex)
     {
-      new ShowException(this).show(ex);
+     // new ShowException(this).show(ex);
     }
     //debugLevel = props.getIntValue("DebugLevel");
-    if (connect)
+/*    if (connect)
       if (!connect(true))
         PlatformTools.putSleep();
-
+*/
     if (myClosingMode == ClosingMode.ReleaseOnClose && !isConnected)
       throw new RuntimeException("Java frame disposed");
   }
@@ -433,7 +433,7 @@ public class LegoRobot implements SharedConstants
       {
         isConnecting = true;
         msg = "Connecting to " + btName + "...";
-        ConnectPanel.show(msg);
+        //ConnectPanel.show(msg);
       }
       int[] uuids = null;  // No service search
       System.out.println("Searching for device " + btName + "...");
@@ -446,8 +446,8 @@ public class LegoRobot implements SharedConstants
         if (isConnectPane)
         {
           msg = "Device " + btName + " not found.";
-          ConnectPanel.show(msg);
-          ConnectPanel.getMop().addExitListener(new MyExitListener());
+      //    ConnectPanel.show(msg);
+      //    ConnectPanel.getMop().addExitListener(new MyExitListener());
           if (myClosingMode == LegoRobot.ClosingMode.DisposeOnClose)
             throw new RuntimeException("Connection failed");
 
@@ -460,7 +460,7 @@ public class LegoRobot implements SharedConstants
     {
       msg = "Connecting to " + btAddressStr + "...";
       if (isConnectPane)
-        ConnectPanel.show(msg);
+  //      ConnectPanel.show(msg);
       isDeviceFound = true;
     }
 
@@ -482,7 +482,7 @@ public class LegoRobot implements SharedConstants
     if (isAnnounce)
       playConnectMelody();
 
-    startButtonListener();
+ //   startButtonListener();
 
  // Wait until the connection is up and running
     // Needed when used as Bluetooth client
@@ -507,7 +507,7 @@ public class LegoRobot implements SharedConstants
       {
         is.close();
         os.close();
-        conn.close();
+    //    conn.close();
       }
       catch (Exception ex)
       {
@@ -558,7 +558,7 @@ public class LegoRobot implements SharedConstants
     {
       is.close();
       os.close();
-      conn.close();
+//      conn.close();
     }
     catch (Exception ex)
     {
@@ -581,16 +581,16 @@ public class LegoRobot implements SharedConstants
     switch (myClosingMode)
     {
       case TerminateOnClose:
-        PlatformTools.exit();
+  //      PlatformTools.exit();
         break;
       case ReleaseOnClose:
       case DisposeOnClose:
-        ConnectPanel.dispose();
+ /*       ConnectPanel.dispose();
         PlatformTools.wakeUp();
         QuitPane.dispose();
         isReleased = true;
         if (Tools.t != null)
-          Tools.t.interrupt();  // taking out of Tools.delay()
+          Tools.t.interrupt();*/  // taking out of Tools.delay()
         break;
     }
   }
@@ -638,13 +638,13 @@ public class LegoRobot implements SharedConstants
    * Returns the StreamConnection reference of the Bluetooth connection.
    * @return StreamConnection or null, if not connected
    */
-  public StreamConnection getStreamConnection()
+/*  public StreamConnection getStreamConnection()
   {
     if (!isConnected)
       return null;
     return conn;
   }
-
+*/
   /**
    * Returns the InputStream reference of the Bluetooth connection.
    * @return InputStream or null, if not connected
@@ -675,11 +675,11 @@ public class LegoRobot implements SharedConstants
     try
     {
       System.out.println("Opening Connector and Streams...");
-      conn = (StreamConnection)Connector.open(connectionUrl);
+/*      conn = (StreamConnection)Connector.open(connectionUrl);
       is = conn.openInputStream();
-      os = conn.openOutputStream();
+      os = conn.openOutputStream();*/
     }
-    catch (IOException ex)
+    catch (Exception ex)
     {
       String cause
         = "Possible causes:\n"
@@ -691,13 +691,13 @@ public class LegoRobot implements SharedConstants
           msg = "Connection to " + btName + " failed.\n" + cause;
         else
           msg = "Connection to " + btAddressStr + " failed.\n" + cause;
-        ConnectPanel.show(msg);
-        ConnectPanel.getMop().addExitListener(new MyExitListener());
+ //       ConnectPanel.show(msg);
+//        ConnectPanel.getMop().addExitListener(new MyExitListener());
         if (myClosingMode == LegoRobot.ClosingMode.DisposeOnClose)
           throw new RuntimeException("Connection failed");
       }
       System.out.println(msg);
-      PlatformTools.wakeUp();
+ //     PlatformTools.wakeUp();
       return;
     }
 
@@ -711,13 +711,13 @@ public class LegoRobot implements SharedConstants
         + "Bluetooth address = " + btAddressStr + " (hex)\n"
         + "Application running...\n"
         + "(Close the window to terminate.)";
-      ConnectPanel.show(msg);
-      ConnectPanel.showVersion();
-      ConnectPanel.getMop().addExitListener(new MyExitListener());
+  //    ConnectPanel.show(msg);
+//      ConnectPanel.showVersion();
+  //    ConnectPanel.getMop().addExitListener(new MyExitListener());
       delay(3000);
     }
     isConnected = true;
-    PlatformTools.wakeUp();
+//    PlatformTools.wakeUp();
   }
 
   /**
@@ -766,11 +766,11 @@ public class LegoRobot implements SharedConstants
   {
     if (debugLevel == DEBUG_LEVEL_HIGH)
     {
-      DebugConsole.show("DEBUG: sendData(byte[] command)\ncommand:");
+ /*     DebugConsole.show("DEBUG: sendData(byte[] command)\ncommand:");
       for (int i = 0; i
         < command.length; i++)
         DebugConsole.show("  " + command[i]);
-    }
+    */}
 
     if (myClosingMode == ClosingMode.ReleaseOnClose && isReleased)
       throw new RuntimeException("Java frame disposed");
@@ -823,11 +823,11 @@ public class LegoRobot implements SharedConstants
 
     if (debugLevel == DEBUG_LEVEL_HIGH)
     {
-      DebugConsole.show("DEBUG: readData() returned:");
+ /*     DebugConsole.show("DEBUG: readData() returned:");
       for (int i = 0; i
         < reply.length; i++)
         DebugConsole.show("  " + reply[i]);
-    }
+    */}
 
     return reply;
   }
@@ -839,7 +839,7 @@ public class LegoRobot implements SharedConstants
     int regulationMode, int turnRatio,
     int runState, long tachoLimit)
   {
-    if (debugLevel >= DEBUG_LEVEL_MEDIUM)
+/*    if (debugLevel >= DEBUG_LEVEL_MEDIUM)
       DebugConsole.show("DEBUG: setOutputState("
         + portId + ", "
         + power + ", "
@@ -847,7 +847,7 @@ public class LegoRobot implements SharedConstants
         + regulationMode + ", "
         + turnRatio + ", "
         + runState + ", "
-        + tachoLimit + ")");
+        + tachoLimit + ")");*/
     byte[] request =
     {
       DIRECT_COMMAND_NOREPLY, SET_OUTPUT_STATE, (byte)portId,
@@ -872,9 +872,9 @@ public class LegoRobot implements SharedConstants
       DIRECT_COMMAND_REPLY, GET_OUTPUT_STATE, (byte)port
     };
     byte[] reply = requestData(request);
-    if (reply[1] != GET_OUTPUT_STATE)
+/*    if (reply[1] != GET_OUTPUT_STATE)
       new ShowError("Error in LegoRobot.getOutputState()\n"
-        + "Return data did not match request");
+        + "Return data did not match request");*/
     OutputState outputState = new OutputState(port);
     outputState.status = reply[2];
     outputState.outputPort = reply[3];
@@ -904,11 +904,11 @@ public class LegoRobot implements SharedConstants
 
   protected void setInputMode(int portId, int sensorType, int sensorMode)
   {
-    if (debugLevel >= DEBUG_LEVEL_MEDIUM)
+/*    if (debugLevel >= DEBUG_LEVEL_MEDIUM)
       DebugConsole.show("DEBUG: setInputMode("
         + portId + ", "
         + sensorType + ", "
-        + sensorMode + ")");
+        + sensorMode + ")");*/
     byte[] request =
     {
       DIRECT_COMMAND_NOREPLY, SET_INPUT_MODE, (byte)portId,
@@ -921,7 +921,7 @@ public class LegoRobot implements SharedConstants
    * Reads the values from given a sensor port.
    * @param portId the Id of the sensor port (0,..3)
    */
-  protected synchronized InputValues getInputValues(int portId)
+/*  protected synchronized InputValues getInputValues(int portId)
   {
     byte[] request =
     {
@@ -951,7 +951,7 @@ public class LegoRobot implements SharedConstants
 
     return inputValues;
   }
-
+*/
   /**
    * Returns the connection state.
    * @return true, if connected, otherwise false
@@ -1083,7 +1083,7 @@ public class LegoRobot implements SharedConstants
    * Keep calling findNext() until it returns null, meaning there are no more files
    * @return FileInfo reference giving details of the first file found or null if the search fails
    */
-  public FileInfo findFirst()
+/*  public FileInfo findFirst()
   {
     byte[] request =
     {
@@ -1117,13 +1117,13 @@ public class LegoRobot implements SharedConstants
 
     return fileInfo;
   }
-
+*/
   /**
    * Searches the next file in a file enumeration.
    * @param handle the handle of the previous found file
    * @return FileInfo reference giving details of the file or null if the search fails
    */
-  public FileInfo findNext(
+/*  public FileInfo findNext(
     byte handle)
   {
     byte[] request =
@@ -1156,12 +1156,12 @@ public class LegoRobot implements SharedConstants
 
     return fileInfo;
   }
-
+*/
   /**
    * Searches for given file in the brick's file system.
    * @return true, if file exists, otherwise false
    */
-  public boolean fileExists(String filename)
+/*  public boolean fileExists(String filename)
   {
     FileInfo fi = findFirst();
     if (fi == null)
@@ -1178,7 +1178,7 @@ public class LegoRobot implements SharedConstants
       return false;
     }
   }
-
+*/
   private byte[] appendString(byte[] command, String str)
   {
     byte[] buff = new byte[command.length + str.length() + 1];
@@ -1233,20 +1233,20 @@ public class LegoRobot implements SharedConstants
    * Starts a button listener to get button hit events. 
    * The listener is started automatically by the LegoRobot constructor.
    */
-  public synchronized void startButtonListener()
+/*  public synchronized void startButtonListener()
   {
     javax.swing.JDialog dlg = ConnectPanel.getMop().getDialog();
     dlg.addKeyListener(new ButtonListener());
     dlg.setFocusable(true);
     isButtonListenerRunning = true;
-  }
+  }*/
 
   /**
    * Stops the button listener and disables button hit events.
    */
   public synchronized void stopButtonListener()
   {
-    ConnectPanel.getMop().getDialog().addKeyListener(null);
+    //ConnectPanel.getMop().getDialog().addKeyListener(null);
     isButtonListenerRunning = false;
   }
 
@@ -1258,7 +1258,7 @@ public class LegoRobot implements SharedConstants
    */
   public boolean isButtonHit()
   {
-    Tools.delay(10);
+//    Tools.delay(10);
     if (!isConnected)
       return true;
     return (buttonID != 0);
@@ -1287,7 +1287,7 @@ public class LegoRobot implements SharedConstants
    */
   public boolean isUpHit()
   {
-    Tools.delay(10);
+ //   Tools.delay(10);
     if (!isConnected)
       return true;
     boolean pressed = (buttonID == BrickButton.ID_UP);
@@ -1304,7 +1304,7 @@ public class LegoRobot implements SharedConstants
    */
   public boolean isDownHit()
   {
-    Tools.delay(10);
+ //   Tools.delay(10);
     if (!isConnected)
       return true;
     boolean pressed = (buttonID == BrickButton.ID_DOWN);
@@ -1321,7 +1321,7 @@ public class LegoRobot implements SharedConstants
    */
   public boolean isLeftHit()
   {
-    Tools.delay(10);
+//    Tools.delay(10);
     if (!isConnected)
       return true;
     boolean pressed = (buttonID == BrickButton.ID_LEFT);
@@ -1338,7 +1338,7 @@ public class LegoRobot implements SharedConstants
    */
   public boolean isRightHit()
   {
-    Tools.delay(10);
+//    Tools.delay(10);
     if (!isConnected)
       return true;
     boolean pressed = (buttonID == BrickButton.ID_RIGHT);
@@ -1355,7 +1355,7 @@ public class LegoRobot implements SharedConstants
    */
   public boolean isEnterHit()
   {
-    Tools.delay(10);
+ //   Tools.delay(10);
     if (!isConnected)
       return true;
     boolean pressed = (buttonID == BrickButton.ID_ENTER);
@@ -1372,7 +1372,7 @@ public class LegoRobot implements SharedConstants
    */
   public boolean isEscapeHit()
   {
-    Tools.delay(10);
+ //   Tools.delay(10);
     if (!isConnected)
       return true;
     boolean pressed = (buttonID == BrickButton.ID_ESCAPE);

@@ -349,8 +349,8 @@ public class Motor extends Part
 
     if (blocking)
     {
-      if (LegoRobot.getDebugLevel() >= DEBUG_LEVEL_MEDIUM)
-        DebugConsole.show("Motor.rotateTo() going to sleep");
+  //    if (LegoRobot.getDebugLevel() >= DEBUG_LEVEL_MEDIUM)
+    //    DebugConsole.show("Motor.rotateTo() going to sleep");
       
     }
     return this;

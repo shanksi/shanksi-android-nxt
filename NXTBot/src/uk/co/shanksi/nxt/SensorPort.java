@@ -16,7 +16,7 @@ package uk.co.shanksi.nxt;
 /**
  * Useful declarations for sensor port connections.
  */
-public class SensorPort 
+public class SensorPort extends Port
 {
   /**
    * Declaration used by a sensor connected to port S1.
