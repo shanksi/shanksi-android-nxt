@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import uk.co.shanksi.nxt.*;
+
 public class NxtBrick {
 	
 	private OutputStream out;
@@ -23,6 +25,7 @@ public class NxtBrick {
 		this.in = in;
 try{
         playTone('d', 'z'); sayHello();
+    setOutputState(0, 100, true, false, MOTOR_RUN_STATE_RAMPUP);
 	
 		} catch (IOException ex) {}}
 	

@@ -115,32 +115,32 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
     private BluetoothAdapter mBluetoothAdapter = null;
 
     private void doConnect() {
-        NxtRobot mySimpleRobot = new NxtRobot("NXT", true);
-        Motor m = new Motor(MotorPort.A);
-        mySimpleRobot.addPart(m);
-        m.setSpeed(5);
-        m.forward();
-        //delay(1000);
-        m.stop();
+//        NxtRobot mySimpleRobot = new NxtRobot("NXT", true);
+//        Motor m = new Motor(MotorPort.A);
+//        mySimpleRobot.addPart(m);
+//        m.setSpeed(5);
+//        m.forward();
+//        //delay(1000);
+//        m.stop();
 
 
 
 
-//        // find Bluetooth NXT
-//        Log.i("NXT", "About to start bluetooth");
-//        if (mBluetoothAdapter == null) {
-//            // Register the BroadcastReceiver
-//            IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
-//            registerReceiver(mReceiver, filter); // Don't forget to unregister during onDestroy
-//
-//            mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-//
-//            if (mBluetoothAdapter != null) {
-//                // Device does not support Bluetooth
-//                mBluetoothAdapter.startDiscovery();
-//                Log.e("BlueMarketing", "Start Discovery");
-//            }
-//        }
+        // find Bluetooth NXT
+        Log.i("NXT", "About to start bluetooth");
+        if (mBluetoothAdapter == null) {
+            // Register the BroadcastReceiver
+            IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
+            registerReceiver(mReceiver, filter); // Don't forget to unregister during onDestroy
+
+            mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+
+            if (mBluetoothAdapter != null) {
+                // Device does not support Bluetooth
+                mBluetoothAdapter.startDiscovery();
+                Log.e("BlueMarketing", "Start Discovery");
+            }
+        }
 
     }
 
