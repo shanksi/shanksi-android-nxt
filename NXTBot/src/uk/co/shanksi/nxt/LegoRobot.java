@@ -114,7 +114,7 @@ public class LegoRobot implements SharedConstants
 
   
   // ---------------- Inner class KeepAliveThread ----------------------
-  private class KeepAliveThread extends NxtThread
+  private class KeepAliveThread //extends NxtThread
   {
     private LegoRobot robot;
     private final long lifeTime = 540000; // ms. Aftere 600s the NXT is off

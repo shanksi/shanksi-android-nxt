@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import uk.co.shanksi.nxt.*;
+import uk.co.shanksi.nxt.SharedConstants;
 
 public class NxtBrick {
 	
@@ -25,7 +25,7 @@ public class NxtBrick {
 		this.in = in;
 try{
         playTone('d', 'z'); sayHello();
-    setOutputState(0, 100, true, false, MOTOR_RUN_STATE_RAMPUP);
+    setOutputState((byte)0x02, (byte)0x55, true, false, (byte)0x20);
 	
 		} catch (IOException ex) {}}
 	
@@ -74,7 +74,7 @@ try{
 			boolean motorSync, 
 			byte runState) throws IOException {
 		byte[] msg = { (byte)0x80, 0x04, motor, power, 
-				0x01, 0x01, 0x33, runState, 0x00, 
+				0x07, 0x00, 0x00, runState, 0x00, 
 				0x00, 0x00, 0x00 };
  
 		sendMessage(msg);

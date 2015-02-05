@@ -200,6 +200,7 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
         final ToggleButton bluetoothToggle = (ToggleButton) findViewById(R.id.bluetoothToggle);
         bluetoothToggle.setOnCheckedChangeListener(new ToggleButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton t, boolean b) {
+				Log.d("NXT", "Checked");
                 if (t.isChecked()) doConnect();
             }
         });

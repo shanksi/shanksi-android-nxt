@@ -105,13 +105,13 @@ public class Motor extends Part
    * @param motionListener a reference to a MotionListener
    * @see MotionListener
    * @see #rotateTo(int count, boolean blocking)
-   */
+   *
   public void addMotionListener(MotionListener motionListener)
   {
 /*    this.motionListener = motionListener;
     md = new MotionDetector();
-*/  }
-
+ }
+*/
   protected void startMotionDetector()
   {
  /*   if (md != null && !md.isAlive())
@@ -295,7 +295,7 @@ public class Motor extends Part
    */
   public int velocityToSpeed(double velocity)
   {
-    return Tools.round(velocity / speedFactor);
+    return (int)Math.round(velocity / speedFactor);
   }
 
   /**
@@ -334,8 +334,8 @@ public class Motor extends Part
     if (count == 0)  // special case will cause rotation for ever
       return this;
 
-    if (blocking)
-      addMotionListener(new MyMotionListener());
+  //  if (blocking)
+ //     addMotionListener(new MyMotionListener());
     this.runState = MOTOR_RUN_STATE_RUNNING;
     if (count > 0)
       robot.setOutputState(portId, (byte)speed, mode + MOTORON, regulationMode,
@@ -344,8 +344,8 @@ public class Motor extends Part
       robot.setOutputState(portId, (byte)-speed, mode + MOTORON, regulationMode,
         turnRatio, runState, -count);
 
-    if (motionListener != null)
-      startMotionDetector();
+  //  if (motionListener != null)
+ //     startMotionDetector();
 
     if (blocking)
     {
