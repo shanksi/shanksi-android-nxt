@@ -24,7 +24,7 @@ public class NxtBrick {
 		this.out = out;
 		this.in = in;
 try{
-        playTone('d', 'z'); sayHello();
+        playTone('d', 'z');
     setOutputState((byte)0x02, (byte)0x55, true, false, (byte)0x20);
 	
 		} catch (IOException ex) {}}

@@ -57,10 +57,10 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
                 // Get the BluetoothDevice object from the Intent
                 BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
                 BluetoothClass btc = device.getBluetoothClass();
-                Log.d("NXTBotGuard", "Bluetooth: " + device.getName() + " " + btc.getDeviceClass() + " " + btc.getMajorDeviceClass());
+                Log.d("NXT", "Bluetooth: " + device.getName() + " " + btc.getDeviceClass() + " " + btc.getMajorDeviceClass());
 
                 if (device.getName().equals("NXT")) {
-                    Log.d("NxtBotGuard", "Ok device found:" + device.getName());
+                    Log.d("NXT", "Ok device found:" + device.getName());
                     Method m;
                     try {
                         m = device.getClass().getMethod("createRfcommSocket", new Class[]{int.class});

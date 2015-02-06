@@ -13,6 +13,7 @@
 package uk.co.shanksi.nxt;
 
 import uk.co.shanksi.nxt.platform.*;
+import uk.co.shanksi.nxt.MotorRunState;
 /**
  * Class that represents one of the NXT motors.
  * Most methods will call connect, if not yet connected.
@@ -60,7 +61,7 @@ public class Motor extends Part
     mode = BRAKE + REGULATED;
     regulationMode = REGULATION_MODE_MOTOR_SPEED;
     turnRatio = 0;
-    runState = MOTOR_RUN_STATE_IDLE;
+    runState = MotorRunState.MOTOR_RUN_STATE_IDLE;
   }
 
   /**
@@ -249,7 +250,7 @@ public class Motor extends Part
       return this;
     checkConnect();
     isMotorMoving = false;
-    runState = MOTOR_RUN_STATE_RUNNING;
+    runState = MotorRunState.MOTOR_RUN_STATE_RUNNING;
     robot.setOutputState(portId, (byte)0, BRAKE + MOTORON + REGULATED,
       regulationMode, turnRatio, runState, 0);
     state = MotorState.STOPPED;
@@ -336,7 +337,7 @@ public class Motor extends Part
 
   //  if (blocking)
  //     addMotionListener(new MyMotionListener());
-    this.runState = MOTOR_RUN_STATE_RUNNING;
+    this.runState = MotorRunState.MOTOR_RUN_STATE_RUNNING;
     if (count > 0)
       robot.setOutputState(portId, (byte)speed, mode + MOTORON, regulationMode,
         turnRatio, runState, count);
