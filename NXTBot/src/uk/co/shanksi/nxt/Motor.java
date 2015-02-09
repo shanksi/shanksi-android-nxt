@@ -13,6 +13,7 @@
 package uk.co.shanksi.nxt;
 
 import uk.co.shanksi.nxt.platform.*;
+import uk.co.shanksi.nxt.NxtCommand;
 import uk.co.shanksi.nxt.MotorRunState;
 /**
  * Class that represents one of the NXT motors.
@@ -321,7 +322,7 @@ public class Motor extends Part
     checkConnect();
     byte[] request =
     {
-      DIRECT_COMMAND_NOREPLY, RESET_MOTOR_POSITION, (byte)portId, (byte)0
+      DIRECT_COMMAND_NOREPLY, NxtCommand.RESET_MOTOR_POSITION, (byte)portId, (byte)0
     };
     robot.sendData(request);
   }

@@ -139,7 +139,7 @@ public interface SharedConstants
   byte POLL = (byte)0xA2;
   byte POLL_BUFFER = (byte)0x00;
   byte HIGH_SPEED_BUFFER = (byte)0x01;
-  byte START_PROGRAM = 0x00;
+/*  byte START_PROGRAM = 0x00;
   byte STOP_PROGRAM = 0x01;
   byte PLAY_SOUND_FILE = 0x02;
   byte PLAY_TONE = 0x03;
@@ -157,7 +157,7 @@ public interface SharedConstants
   byte LS_WRITE = 0x0F;
   byte LS_READ = 0x10;
   byte GET_CURRENT_PROGRAM_NAME = 0x11;
-  byte MESSAGE_READ = 0x13;
+  byte MESSAGE_READ = 0x13;*/
   byte MOTORON = 0x01;
   byte BRAKE = 0x02;
   byte REGULATED = 0x04;
