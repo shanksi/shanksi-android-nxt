@@ -13,17 +13,24 @@ However the use of the code is entirely your responsibility.
 
 package uk.co.shanksi.nxt;
 
+import at.smartlab.lego.NxtBrick;
+
 /**
  * Abstract class as ancestor of all parts.
  */
 public abstract class Part implements SharedConstants
 {
   protected LegoRobot robot = null;
-  
+  protected NxtBrick brick = null;
+ 
   protected void setRobot(LegoRobot robot)
   {
     this.robot = robot;
   }  
+  
+  protected void setBrick(NxtBrick brick) {
+	  this.brick = brick;
+  }
   
   // Called when connected
   protected abstract void init();

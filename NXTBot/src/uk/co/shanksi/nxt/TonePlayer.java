@@ -14,11 +14,12 @@ public class TonePlayer extends Part
 		byte [] msg = new byte [6];
 		msg[0] = (byte)0x80;
 		msg[1] = (byte)0x03;
-		msg[2] = (byte)(f & 0xff);
-		msg[3] = (byte)((f >> 8) & 0xff);
-		msg[4] = (byte)(msec & 0xff);
-		msg[5] = (byte)((msec >> 8) & 0xff);
-		robot.sendData(msg);
+		msg[2] = (byte)(f);
+		msg[3] = (byte)(f >>> 8);
+		msg[4] = (byte)(msec);
+		msg[5] = (byte)(msec >>> 8);
+		//robot.sendData(msg);
+		brick.sendMessage(msg);
 	}
 	
 
@@ -39,7 +40,8 @@ public class TonePlayer extends Part
 		msg[3] = (byte)((f >> 8) & 0xff);
 		msg[4] = (byte)(msec & 0xff);
 		msg[5] = (byte)((msec >> 8) & 0xff);
-		robot.sendData(msg);
+		//robot.sendData(msg);
+		brick.sendMessage(msg);		
 	}
 	
 	/**

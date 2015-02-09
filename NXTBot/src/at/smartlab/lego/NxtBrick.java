@@ -25,7 +25,7 @@ public class NxtBrick {
 		this.in = in;
 try{
         playTone('d', 'z');
-    setOutputState((byte)0x02, (byte)0x55, true, false, (byte)0x20);
+  //  setOutputState((byte)0x02, (byte)0x55, true, false, (byte)0x20);
 	
 		} catch (IOException ex) {}}
 	
@@ -80,7 +80,17 @@ try{
 		sendMessage(msg);
 	}
 	
-	private void sendMessage(byte [] msg) throws IOException {
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public void sendMessage(byte [] msg) throws IOException {
 		if(out !=null) {
 			out.write(msg.length & 0xff);
 			out.write((msg.length >> 8) & 0xff);
@@ -88,4 +98,8 @@ try{
 			out.flush();
 		}
 	}
+	
+	
+	
+	
 }

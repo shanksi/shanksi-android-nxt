@@ -66,7 +66,9 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
                         m = device.getClass().getMethod("createRfcommSocket", new Class[]{int.class});
                         final BluetoothSocket socket = (BluetoothSocket) m.invoke(device, 1);
                         socket.connect();
-                        LocalHttpService.setNxt(new NxtBrick(socket.getOutputStream(), socket.getInputStream()));
+						NxtBrick brick=new NxtBrick(socket.getOutputStream(), socket.getInputStream());
+                        LocalHttpService.setNxt(brick);
+						NxtRobot robot = new NxtRobot(brick);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
