@@ -11,12 +11,28 @@ public class NxtRobot
 	private NxtBrick brick;
 	private TonePlayer tonePlayer;
 
+	private Motor left=new Motor(MotorPort.C);
+	private Motor right=new Motor(MotorPort.B);
+	
     public NxtRobot(NxtBrick brick) {
 		this.brick = brick;
 		this.tonePlayer = new TonePlayer();
 		this.tonePlayer.setBrick(this.brick);	
         try {
 		    this.tonePlayer.playConnectMelody();
+			
+			
+			this.left.setBrick(this.brick);
+			this.right.setBrick(this.brick);
+			
+			this.left.forward(true);
+			this.right.backward(true);
+			
+			delay(3000);
+			
+			this.left.stop();
+			this.right.stop();
+			
 		} catch(IOException ex) {}
 	}	
 	
@@ -30,4 +46,16 @@ public class NxtRobot
 		    this.tonePlayer.playConnectMelody();
 		} catch(IOException ex) {}
 	}
+	
+	
+
+	public void delay(int msec) {
+	    try {
+		    Thread.sleep(msec);                 //1000 milliseconds is one second.
+	    } catch(InterruptedException ex) {
+		    Thread.currentThread().interrupt();
+    	}	
+	}
+	
+	
 }

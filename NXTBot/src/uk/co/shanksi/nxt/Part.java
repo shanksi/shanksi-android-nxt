@@ -31,7 +31,15 @@ public abstract class Part implements SharedConstants
   protected void setBrick(NxtBrick brick) {
 	  this.brick = brick;
   }
-  
+
+  protected void delay(int msec) {
+    try {
+	    Thread.sleep(msec);                 //1000 milliseconds is one second.
+    } catch(InterruptedException ex) {
+	    Thread.currentThread().interrupt();
+   	}	
+  }
+	
   // Called when connected
   protected abstract void init();
 
