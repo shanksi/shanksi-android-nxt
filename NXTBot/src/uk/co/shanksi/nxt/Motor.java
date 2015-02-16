@@ -150,8 +150,10 @@ public class Motor extends Part
       runState = MOTOR_RUN_STATE_RAMPUP;
     else
       runState = MOTOR_RUN_STATE_RUNNING;
-*/    robot.setOutputState(portId, (byte)speed, mode + MOTORON,
+    robot.setOutputState(portId, (byte)speed, mode + MOTORON,
       regulationMode, turnRatio, runState, 0);
+      */    this.brick.setOutputState(portId, (byte)speed, mode + MOTORON,
+          regulationMode, turnRatio, runState, 0);
     return this;
   }
 
@@ -252,8 +254,10 @@ public class Motor extends Part
     checkConnect();
     isMotorMoving = false;
     runState = MotorRunState.MOTOR_RUN_STATE_RUNNING;
-    robot.setOutputState(portId, (byte)0, BRAKE + MOTORON + REGULATED,
-      regulationMode, turnRatio, runState, 0);
+      //robot.setOutputState(portId, (byte)0, BRAKE + MOTORON + REGULATED,
+      //  regulationMode, turnRatio, runState, 0);
+    this.brick.setOutputState(portId, (byte)0, BRAKE + MOTORON + REGULATED,
+       regulationMode, turnRatio, runState, 0);
     state = MotorState.STOPPED;
     return this;
   }

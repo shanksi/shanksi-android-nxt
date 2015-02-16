@@ -79,18 +79,45 @@ try{
  
 		sendMessage(msg);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	public void sendMessage(byte [] msg) throws IOException {
+
+
+    /**
+     * Sets the output state of a specific sensor port.
+     */
+    protected synchronized void setOutputState(int portId, byte power, int mode,
+                                               int regulationMode, int turnRatio,
+                                               int runState, long tachoLimit)
+    {
+/*    if (debugLevel >= DEBUG_LEVEL_MEDIUM)
+      DebugConsole.show("DEBUG: setOutputState("
+        + portId + ", "
+        + power + ", "
+        + mode + ", "
+        + regulationMode + ", "
+        + turnRatio + ", "
+        + runState + ", "
+        + tachoLimit + ")");*/
+        byte[] request =
+                {
+                        DIRECT_COMMAND_NOREPLY, NxtCommand.SET_OUTPUT_STATE, (byte)portId,
+                        power, (byte)mode, (byte)regulationMode,
+                        (byte)turnRatio, (byte)runState, (byte)tachoLimit,
+                        (byte)(tachoLimit >>> 8), (byte)(tachoLimit >>> 16),
+                        (byte)(tachoLimit >>> 24)
+                };
+        sendMessage(request);
+    }
+
+
+
+
+
+
+
+
+
+
+    public void sendMessage(byte [] msg) throws IOException {
 		if(out !=null) {
 			out.write(msg.length & 0xff);
 			out.write((msg.length >> 8) & 0xff);

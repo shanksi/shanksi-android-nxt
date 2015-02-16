@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81eee50b-a7fb-408e-b5d3-dd03022b5b87" name="Default" comment="Tweaking">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NXTBot/src/at/smartlab/nxtbotguard/NXTBotGuardActivity.java" afterPath="$PROJECT_DIR$/NXTBot/src/at/smartlab/nxtbotguard/NXTBotGuardActivity.java" />
+    <list default="true" id="81eee50b-a7fb-408e-b5d3-dd03022b5b87" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Motor.java" afterPath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Motor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NXTBot/src/at/smartlab/lego/NxtBrick.java" afterPath="$PROJECT_DIR$/NXTBot/src/at/smartlab/lego/NxtBrick.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shanksi-android-nxt.iml" afterPath="$PROJECT_DIR$/shanksi-android-nxt.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="shanksi-android-nxt.iws" />
@@ -29,16 +27,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="profiles_settings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/copyright/profiles_settings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="scope_settings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/scopes/scope_settings.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -72,17 +60,17 @@
       <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6" vertical-offset="0" max-vertical-offset="120">
+            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="120">
               <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NXTBotGuardActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="NXTBotGuardActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NXTBot/src/at/smartlab/nxtbotguard/NXTBotGuardActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26200873" vertical-offset="0" max-vertical-offset="4545">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="120" max-vertical-offset="4590">
               <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
               <folding />
             </state>
@@ -92,8 +80,8 @@
       <file leaf-file-name="NxtBrick.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NXTBot/src/at/smartlab/lego/NxtBrick.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.84" vertical-offset="19" max-vertical-offset="1455">
-              <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+            <state vertical-scroll-proportion="-17.12" vertical-offset="1177" max-vertical-offset="2070">
+              <caret line="107" column="19" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,30 +89,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Motor.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Motor.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Motor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="9.6" vertical-offset="540" max-vertical-offset="6735">
-              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.7379913" vertical-offset="3172" max-vertical-offset="6630">
+              <caret line="259" column="14" selection-start-line="259" selection-start-column="14" selection-end-line="259" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LegoRobot.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/LegoRobot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.52" vertical-offset="11962" max-vertical-offset="20490">
+              <caret line="860" column="0" selection-start-line="834" selection-start-column="0" selection-end-line="860" selection-end-column="0" />
               <folding>
-                <element signature="e#2055#2056#0" expanded="false" />
-                <element signature="e#2078#2079#0" expanded="false" />
-                <element signature="e#2193#2194#0" expanded="false" />
-                <element signature="e#2225#2226#0" expanded="false" />
-                <element signature="e#5697#5698#0" expanded="false" />
-                <element signature="e#5719#5720#0" expanded="false" />
-                <element signature="e#6552#6553#0" expanded="false" />
-                <element signature="e#6577#6578#0" expanded="false" />
-                <element signature="e#7648#7649#0" expanded="false" />
-                <element signature="e#7677#7678#0" expanded="false" />
-                <element signature="e#7899#7900#0" expanded="false" />
-                <element signature="e#7935#7936#0" expanded="false" />
-                <element signature="e#8163#8164#0" expanded="false" />
-                <element signature="e#8215#8216#0" expanded="false" />
-                <element signature="e#10245#10246#0" expanded="false" />
-                <element signature="e#10295#10296#0" expanded="false" />
-                <element signature="e#12761#12762#0" expanded="false" />
-                <element signature="e#12812#12813#0" expanded="false" />
+                <element signature="e#0#40228#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,11 +114,9 @@
       <file leaf-file-name="NxtProperties.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/platform/NxtProperties.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="83.68" vertical-offset="2377" max-vertical-offset="2835">
+            <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="2850">
               <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -145,11 +124,9 @@
       <file leaf-file-name="SharedConstants.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/SharedConstants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-41.4" vertical-offset="1260" max-vertical-offset="3030">
-              <caret line="153" column="34" selection-start-line="153" selection-start-column="34" selection-end-line="153" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#7158#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="3030">
+              <caret line="154" column="25" selection-start-line="154" selection-start-column="25" selection-end-line="154" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -170,6 +147,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
+    <option name="tasksExpandState">
+      <map>
+        <entry key="" value="true" />
+      </map>
+    </option>
     <option name="availableProjects">
       <map>
         <entry>
@@ -197,14 +179,15 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/NXTBot/src/at/smartlab/nxtbotguard/NXTBotGuardActivity.java" />
         <option value="$PROJECT_DIR$/NXTBot/src/at/smartlab/lego/NxtBrick.java" />
+        <option value="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Motor.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="49" />
-    <option name="y" value="-4" />
+    <option name="y" value="24" />
     <option name="width" value="1551" />
-    <option name="height" value="904" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -232,24 +215,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shanksi-android-nxt" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -434,6 +399,24 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shanksi-android-nxt" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -445,6 +428,194 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="FullScreen" value="false" />
+  </component>
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/lego/NxtBrick.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/Part.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/SharedConstants.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/resources.ap_</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/src/at/smartlab/lego/NxtBrick.java</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/src/at/smartlab/nxtbotguard/NXTBotGuardActivity.java</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/LegoRobot.java</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Motor.java</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Part.java</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/SharedConstants.java</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/NXTBot.apk</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/LogCatBroadcaster.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/lego/NxtBrick.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/BuildConfig.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000000.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000000.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000001.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000001.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000002.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000002.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000003.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000003.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000004.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000004.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000005.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000005.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/R$attr.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/R$color.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/R$drawable.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/R$id.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/R$layout.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/R$string.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/R.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/httpservice/GuardHTTPD.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/httpservice/LocalHttpService$LocalBinder.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/httpservice/LocalHttpService.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/http/NanoHTTPD$100000000.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/http/NanoHTTPD$HTTPSession.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/http/NanoHTTPD$Response.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/http/NanoHTTPD.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/LegoRobot$100000000.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/LegoRobot$100000000.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/LegoRobot$ClosingMode.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/LegoRobot$ClosingMode.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/LegoRobot$KeepAliveThread.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/LegoRobot$KeepAliveThread.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/LegoRobot.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/LegoRobot.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/Motor$MotorState.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/Motor$MotorState.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/Motor.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/Motor.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/MotorPort.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/MotorRunState.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/MotorRunState.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/NxtCommand.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/NxtCommand.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/NxtRobot.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/NxtRobot.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/OutputState.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/Part.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/Port.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/SensorPort.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/SensorPort.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/SharedConstants.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/TonePlayer.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/TonePlayer.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/platform/NxtProperties.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/platform/NxtProperties.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/jardex/nxtlib.jar.dex</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/MotorRunState.java</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/NxtCommand.java</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/NxtRobot.java</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/TonePlayer.java</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
   </component>
   <component name="RunManager">
     <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
@@ -602,11 +773,15 @@
       <created>1422434153891</created>
       <updated>1422434153891</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Tweaking">
+      <created>1423085073683</created>
+      <updated>1423085073683</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="-4" width="1551" height="904" extended-state="6" />
+    <frame x="49" y="24" width="1551" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -617,10 +792,10 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298292" sideWeight="0.49966866" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298292" sideWeight="0.50033134" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298292" sideWeight="0.49966866" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298292" sideWeight="0.49966866" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -652,6 +827,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
@@ -664,6 +840,88 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.idea/copyright/profiles_settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/scopes/scope_settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="225">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="120">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NXTBot/src/at/smartlab/nxtbotguard/NXTBotGuardActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="4545">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NXTBot/src/at/smartlab/lego/NxtBrick.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="1455">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Motor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="7140">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/platform/NxtProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="2850">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/SharedConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1260" max-vertical-offset="3030">
+          <caret line="153" column="34" selection-start-line="153" selection-start-column="34" selection-end-line="153" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/copyright/profiles_settings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
@@ -810,73 +1068,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6" vertical-offset="0" max-vertical-offset="120">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="120">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Motor.java">
+    <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/platform/NxtProperties.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="9.6" vertical-offset="540" max-vertical-offset="6735">
-          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding>
-            <element signature="e#2055#2056#0" expanded="false" />
-            <element signature="e#2078#2079#0" expanded="false" />
-            <element signature="e#2193#2194#0" expanded="false" />
-            <element signature="e#2225#2226#0" expanded="false" />
-            <element signature="e#5697#5698#0" expanded="false" />
-            <element signature="e#5719#5720#0" expanded="false" />
-            <element signature="e#6552#6553#0" expanded="false" />
-            <element signature="e#6577#6578#0" expanded="false" />
-            <element signature="e#7648#7649#0" expanded="false" />
-            <element signature="e#7677#7678#0" expanded="false" />
-            <element signature="e#7899#7900#0" expanded="false" />
-            <element signature="e#7935#7936#0" expanded="false" />
-            <element signature="e#8163#8164#0" expanded="false" />
-            <element signature="e#8215#8216#0" expanded="false" />
-            <element signature="e#10245#10246#0" expanded="false" />
-            <element signature="e#10295#10296#0" expanded="false" />
-            <element signature="e#12761#12762#0" expanded="false" />
-            <element signature="e#12812#12813#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="2850">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/platform/NxtProperties.java">
+    <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/SharedConstants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="83.68" vertical-offset="2377" max-vertical-offset="2835">
-          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="3030">
+          <caret line="154" column="25" selection-start-line="154" selection-start-column="25" selection-end-line="154" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NXTBot/src/at/smartlab/nxtbotguard/NXTBotGuardActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="4545">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/LegoRobot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.52" vertical-offset="11962" max-vertical-offset="20490">
+          <caret line="860" column="0" selection-start-line="834" selection-start-column="0" selection-end-line="860" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#0#40228#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NXTBot/src/at/smartlab/lego/NxtBrick.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.84" vertical-offset="19" max-vertical-offset="1455">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        <state vertical-scroll-proportion="-17.12" vertical-offset="1177" max-vertical-offset="2070">
+          <caret line="107" column="19" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/SharedConstants.java">
+    <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Motor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-41.4" vertical-offset="1260" max-vertical-offset="3030">
-          <caret line="153" column="34" selection-start-line="153" selection-start-column="34" selection-end-line="153" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#7158#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NXTBot/src/at/smartlab/nxtbotguard/NXTBotGuardActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26200873" vertical-offset="0" max-vertical-offset="4545">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.7379913" vertical-offset="3172" max-vertical-offset="6630">
+          <caret line="259" column="14" selection-start-line="259" selection-start-column="14" selection-end-line="259" selection-end-column="14" />
           <folding />
         </state>
       </provider>
