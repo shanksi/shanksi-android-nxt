@@ -28,7 +28,7 @@ public class NxtRobot
 			this.left.forward(true);
 			this.right.backward(true);
 			
-			delay(3000);
+			delay(1000);
 			
 			this.left.stop();
 			this.right.stop();

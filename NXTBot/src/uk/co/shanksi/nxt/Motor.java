@@ -54,7 +54,7 @@ public class Motor extends Part
   {
     NxtProperties props = LegoRobot.getProperties();
     speedFactor = props.getDoubleValue("MotorSpeedFactor");
-    speed = props.getIntValue("MotorSpeed");
+    speed = 60; // props.getIntValue("MotorSpeed");
     pollDelay = props.getIntValue("MotionDetectorPollDelay");
     this.port = port;
     portId = port.getId();
@@ -152,7 +152,10 @@ public class Motor extends Part
       runState = MOTOR_RUN_STATE_RUNNING;
     robot.setOutputState(portId, (byte)speed, mode + MOTORON,
       regulationMode, turnRatio, runState, 0);
-      */    this.brick.setOutputState(portId, (byte)speed, mode + MOTORON,
+	  
+      */    
+	  runState = MotorRunState.MOTOR_RUN_STATE_RUNNING;
+	  this.brick.setOutputState(portId, (byte)speed, mode + MOTORON,
           regulationMode, turnRatio, runState, 0);
     return this;
   }
@@ -181,7 +184,15 @@ public class Motor extends Part
       runState = MOTOR_RUN_STATE_RAMPUP;
     else
       runState = MOTOR_RUN_STATE_RUNNING;
-*/    robot.setOutputState(portId, (byte)-speed, mode + MOTORON,
+*/ 
+	  runState = MotorRunState.MOTOR_RUN_STATE_RUNNING;
+	  
+
+	 /*robot.setOutputState(portId, (byte)-speed, mode + MOTORON,
+						   regulationMode, turnRatio, runState, 0);  
+	  */
+
+this.brick.setOutputState(portId, (byte)-speed, mode + MOTORON,
       regulationMode, turnRatio, runState, 0);
     return this;
   }

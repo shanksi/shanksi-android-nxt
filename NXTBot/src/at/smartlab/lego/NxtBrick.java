@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import uk.co.shanksi.nxt.NxtCommand;
 import uk.co.shanksi.nxt.SharedConstants;
 
 public class NxtBrick {
@@ -84,7 +85,7 @@ try{
     /**
      * Sets the output state of a specific sensor port.
      */
-    protected synchronized void setOutputState(int portId, byte power, int mode,
+    public synchronized void setOutputState(int portId, byte power, int mode,
                                                int regulationMode, int turnRatio,
                                                int runState, long tachoLimit)
     {
@@ -99,13 +100,15 @@ try{
         + tachoLimit + ")");*/
         byte[] request =
                 {
-                        DIRECT_COMMAND_NOREPLY, NxtCommand.SET_OUTPUT_STATE, (byte)portId,
+                        SharedConstants.DIRECT_COMMAND_NOREPLY, NxtCommand.SET_OUTPUT_STATE, (byte)portId,
                         power, (byte)mode, (byte)regulationMode,
                         (byte)turnRatio, (byte)runState, (byte)tachoLimit,
                         (byte)(tachoLimit >>> 8), (byte)(tachoLimit >>> 16),
                         (byte)(tachoLimit >>> 24)
                 };
-        sendMessage(request);
+				try {
+        sendMessage(request);} 
+		catch(IOException ex) {}
     }
 
 
