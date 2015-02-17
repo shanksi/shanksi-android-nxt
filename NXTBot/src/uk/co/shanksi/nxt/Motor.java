@@ -33,7 +33,7 @@ public class Motor extends Part
   private MotorPort port;
   private MotorState state = MotorState.UNDEFINED;
   private boolean isMotorMoving = false;
-  private int portId;
+  
   private int speed;
   private int mode;
   private int regulationMode;
@@ -57,7 +57,7 @@ public class Motor extends Part
     speed = 60; // props.getIntValue("MotorSpeed");
     pollDelay = props.getIntValue("MotionDetectorPollDelay");
     this.port = port;
-    portId = port.getId();
+    
     velocity = speedToVelocity(speed);
     mode = BRAKE + REGULATED;
     regulationMode = REGULATION_MODE_MOTOR_SPEED;
@@ -71,7 +71,7 @@ public class Motor extends Part
    */
   public int getPortId()
   {
-    return portId;
+    return port.getId();
   }
 
   /**
@@ -155,7 +155,7 @@ public class Motor extends Part
 	  
       */    
 	  runState = MotorRunState.MOTOR_RUN_STATE_RUNNING;
-	  this.brick.setOutputState(portId, (byte)speed, mode + MOTORON,
+	  this.brick.setOutputState(port.getId(), (byte)speed, mode + MOTORON,
           regulationMode, turnRatio, runState, 0);
     return this;
   }
@@ -192,7 +192,7 @@ public class Motor extends Part
 						   regulationMode, turnRatio, runState, 0);  
 	  */
 
-this.brick.setOutputState(portId, (byte)-speed, mode + MOTORON,
+this.brick.setOutputState(port.getId(), (byte)-speed, mode + MOTORON,
       regulationMode, turnRatio, runState, 0);
     return this;
   }
@@ -267,7 +267,7 @@ this.brick.setOutputState(portId, (byte)-speed, mode + MOTORON,
     runState = MotorRunState.MOTOR_RUN_STATE_RUNNING;
       //robot.setOutputState(portId, (byte)0, BRAKE + MOTORON + REGULATED,
       //  regulationMode, turnRatio, runState, 0);
-    this.brick.setOutputState(portId, (byte)0, BRAKE + MOTORON + REGULATED,
+    this.brick.setOutputState(port.getId(), (byte)0, BRAKE + MOTORON + REGULATED,
        regulationMode, turnRatio, runState, 0);
     state = MotorState.STOPPED;
     return this;
@@ -321,7 +321,7 @@ this.brick.setOutputState(portId, (byte)-speed, mode + MOTORON,
    */
   public int getMotorCount()
   {
-    OutputState o = robot.getOutputState(portId);
+    OutputState o = robot.getOutputState(port.getId());
     return o.rotationCount;
   }
 
@@ -337,7 +337,7 @@ this.brick.setOutputState(portId, (byte)-speed, mode + MOTORON,
     checkConnect();
     byte[] request =
     {
-      DIRECT_COMMAND_NOREPLY, NxtCommand.RESET_MOTOR_POSITION, (byte)portId, (byte)0
+      DIRECT_COMMAND_NOREPLY, NxtCommand.RESET_MOTOR_POSITION, (byte)port.getId(), (byte)0
     };
     robot.sendData(request);
   }
@@ -355,10 +355,10 @@ this.brick.setOutputState(portId, (byte)-speed, mode + MOTORON,
  //     addMotionListener(new MyMotionListener());
     this.runState = MotorRunState.MOTOR_RUN_STATE_RUNNING;
     if (count > 0)
-      robot.setOutputState(portId, (byte)speed, mode + MOTORON, regulationMode,
+      robot.setOutputState(port.getId(), (byte)speed, mode + MOTORON, regulationMode,
         turnRatio, runState, count);
     else
-      robot.setOutputState(portId, (byte)-speed, mode + MOTORON, regulationMode,
+      robot.setOutputState(port.getId(), (byte)-speed, mode + MOTORON, regulationMode,
         turnRatio, runState, -count);
 
   //  if (motionListener != null)
