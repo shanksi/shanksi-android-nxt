@@ -25,8 +25,9 @@ public class NxtRobot
 			this.left.setBrick(this.brick);
 			this.right.setBrick(this.brick);
 			
-			this.left.forward(true);
 			this.right.backward(true);
+			this.left.forward(true);
+
 			
 			delay(1000);
 			

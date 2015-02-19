@@ -729,7 +729,7 @@ public class LegoRobot implements SharedConstants
     StringBuffer sb = null;
     byte[] request =
     {
-      SYSTEM_COMMAND_REPLY, GET_DEVICE_INFO
+      CommandType.SYSTEM_COMMAND_REPLY, GET_DEVICE_INFO
     };
     byte[] reply = requestData(request);
     sb
@@ -850,7 +850,7 @@ public class LegoRobot implements SharedConstants
         + tachoLimit + ")");*/
     byte[] request =
     {
-      DIRECT_COMMAND_NOREPLY, NxtCommand.SET_OUTPUT_STATE, (byte)portId,
+     CommandType.DIRECT_COMMAND_NOREPLY, NxtCommand.SET_OUTPUT_STATE, (byte)portId,
       power, (byte)mode, (byte)regulationMode,
       (byte)turnRatio, (byte)runState, (byte)tachoLimit,
       (byte)(tachoLimit >>> 8), (byte)(tachoLimit >>> 16),
@@ -869,7 +869,7 @@ public class LegoRobot implements SharedConstants
     // !! Needs to check port to verify they are correct ranges.
     byte[] request =
     {
-      DIRECT_COMMAND_REPLY, NxtCommand.GET_OUTPUT_STATE, (byte)port
+		  CommandType.DIRECT_COMMAND_REPLY, NxtCommand.GET_OUTPUT_STATE, (byte)port
     };
     byte[] reply = requestData(request);
 /*    if (reply[1] != GET_OUTPUT_STATE)
@@ -911,7 +911,7 @@ public class LegoRobot implements SharedConstants
         + sensorMode + ")");*/
     byte[] request =
     {
-      DIRECT_COMMAND_NOREPLY, NxtCommand.SET_INPUT_MODE, (byte)portId,
+		  CommandType.DIRECT_COMMAND_NOREPLY, NxtCommand.SET_INPUT_MODE, (byte)portId,
       (byte)sensorType, (byte)sensorMode
     };
     sendData(request);
@@ -968,7 +968,7 @@ public class LegoRobot implements SharedConstants
   {
     byte[] request =
     {
-      DIRECT_COMMAND_NOREPLY, NxtCommand.PLAY_TONE, (byte)frequency,
+		  CommandType.DIRECT_COMMAND_NOREPLY, NxtCommand.PLAY_TONE, (byte)frequency,
       (byte)(frequency >>> 8), (byte)duration, (byte)(duration >>> 8)
     };
     sendData(request);
@@ -983,7 +983,7 @@ public class LegoRobot implements SharedConstants
     int batteryLevel = 0;
     byte[] request =
     {
-      DIRECT_COMMAND_REPLY, NxtCommand.GET_BATTERY_LEVEL
+		  CommandType.DIRECT_COMMAND_REPLY, NxtCommand.GET_BATTERY_LEVEL
     };
     byte[] reply = requestData(request);
     batteryLevel
@@ -1047,7 +1047,7 @@ public class LegoRobot implements SharedConstants
   {
     byte[] request =
     {
-      DIRECT_COMMAND_NOREPLY, NxtCommand.KEEP_ALIVE
+		  CommandType.DIRECT_COMMAND_NOREPLY, NxtCommand.KEEP_ALIVE
     };
     sendData(request);
   }
@@ -1067,7 +1067,7 @@ public class LegoRobot implements SharedConstants
 
     byte[] request =
     {
-      DIRECT_COMMAND_NOREPLY, NxtCommand.START_PROGRAM
+		  CommandType.DIRECT_COMMAND_NOREPLY, NxtCommand.START_PROGRAM
     };
     request
       = appendString(request, filename);

@@ -6,6 +6,7 @@ import java.io.OutputStream;
 
 import uk.co.shanksi.nxt.NxtCommand;
 import uk.co.shanksi.nxt.SharedConstants;
+import uk.co.shanksi.nxt.CommandType;
 
 public class NxtBrick {
 	
@@ -24,11 +25,12 @@ public class NxtBrick {
 			InputStream in) {
 		this.out = out;
 		this.in = in;
-try{
-        playTone('d', 'z');
+//try{
+      //  playTone('d', 'z');
   //  setOutputState((byte)0x02, (byte)0x55, true, false, (byte)0x20);
 	
-		} catch (IOException ex) {}}
+	//	} catch (IOException ex) {}
+		}
 	
 	/**
 	 * Play a tone on the Nxt brick.
@@ -100,10 +102,17 @@ try{
         + tachoLimit + ")");*/
         byte[] request =
                 {
-                        SharedConstants.DIRECT_COMMAND_NOREPLY, NxtCommand.SET_OUTPUT_STATE, (byte)portId,
-                        power, (byte)mode, (byte)regulationMode,
-                        (byte)turnRatio, (byte)runState, (byte)tachoLimit,
-                        (byte)(tachoLimit >>> 8), (byte)(tachoLimit >>> 16),
+			            CommandType.DIRECT_COMMAND_NOREPLY, 
+						NxtCommand.SET_OUTPUT_STATE, 
+						(byte)portId,
+                        power, 
+						(byte)mode, 
+						(byte)regulationMode,
+                        (byte)turnRatio, 
+						(byte)runState, 
+						(byte)tachoLimit,
+                        (byte)(tachoLimit >>> 8), 
+						(byte)(tachoLimit >>> 16),
                         (byte)(tachoLimit >>> 24)
                 };
 				try {

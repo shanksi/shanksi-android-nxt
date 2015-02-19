@@ -126,6 +126,16 @@ public class Motor extends Part
       md.stopThread();
 */  }
 
+
+
+
+protected Motor setState(int speed, byte mode, byte runState, int count) {
+	this.brick.setOutputState(port.getId(), (byte)speed, mode,
+							  this.regulationMode, this.turnRatio, runState, count);
+    return this;
+}
+
+
   /**
    * Starts the forward rotation with preset speed.
    * Method returns, while the rotation continues. (If motor is already
@@ -337,7 +347,7 @@ this.brick.setOutputState(port.getId(), (byte)-speed, mode + MOTORON,
     checkConnect();
     byte[] request =
     {
-      DIRECT_COMMAND_NOREPLY, NxtCommand.RESET_MOTOR_POSITION, (byte)port.getId(), (byte)0
+      CommandType.DIRECT_COMMAND_NOREPLY, NxtCommand.RESET_MOTOR_POSITION, (byte)port.getId(), (byte)0
     };
     robot.sendData(request);
   }
@@ -474,14 +484,5 @@ this.brick.setOutputState(port.getId(), (byte)-speed, mode + MOTORON,
     return isMotorMoving;
   }
 
-  private void delay(long timeout)
-  {
-    try
-    {
-      Thread.currentThread().sleep(timeout);
-    }
-    catch (InterruptedException ex)
-    {
-    }
-  }
+
 }

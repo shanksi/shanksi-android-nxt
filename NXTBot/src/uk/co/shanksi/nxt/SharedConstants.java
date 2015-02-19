@@ -113,11 +113,11 @@ public interface SharedConstants
   String TITLE = "NxtJLib V" + VERSION + "   (www.aplu.ch)";
   String TITLEMP = "NxtJLib V" + VERSION + "\n(www.aplu.ch)";
 
-  byte DIRECT_COMMAND_REPLY = 0x00;
+  /*byte DIRECT_COMMAND_REPLY = 0x00;
   byte SYSTEM_COMMAND_REPLY = 0x01;
   byte REPLY_COMMAND = 0x02;
   byte DIRECT_COMMAND_NOREPLY = (byte)0x80;
-  byte SYSTEM_COMMAND_NOREPLY = (byte)0x81;
+  byte SYSTEM_COMMAND_NOREPLY = (byte)0x81;*/
   byte OPEN_READ = (byte)0x80;
   byte OPEN_WRITE = (byte)0x81;
   byte READ = (byte)0x82;
