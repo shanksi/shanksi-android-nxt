@@ -60,7 +60,7 @@ public class Motor extends Part
     
     velocity = speedToVelocity(speed);
     mode = BRAKE + REGULATED;
-    regulationMode = REGULATION_MODE_MOTOR_SPEED;
+    regulationMode = RegulationMode.REGULATION_MODE_MOTOR_SPEED;
     turnRatio = 0;
     runState = MotorRunState.MOTOR_RUN_STATE_IDLE;
   }

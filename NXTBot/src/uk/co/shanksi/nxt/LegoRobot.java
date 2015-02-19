@@ -548,7 +548,7 @@ public class LegoRobot implements SharedConstants
     // Stop all motors
     byte ALL_MOTORS = (byte)0xFF;
     setOutputState(ALL_MOTORS, (byte)0, 0x00,
-      REGULATION_MODE_IDLE, 0,
+      RegulationMode.REGULATION_MODE_IDLE, 0,
       MotorRunState.MOTOR_RUN_STATE_IDLE, 0);
     if (isAnnounce)
       playDisconnectMelody();
