@@ -30,25 +30,29 @@ public class NxtRobot
 		} catch(IOException ex) {}
 	}	
 	
+	public void setMotors(int left,int right) {
+    	this.left.setSpeed(left);
+        this.right.setSpeed(right);
+        this.left.forward();
+        this.right.forward();
+	
+	}
+	
 	public void forward() {
-		this.right.forward();
-		this.left.forward();
+		this.setMotors(70, 70);
 	}
 	
 	
 	public void leftspin() {
-		this.right.forward();
-		this.left.backward();
+		this.setMotors(-70, 70);
 	}
 	
 	public void rightspin() {
-		this.right.backward();
-		this.left.forward();
+		this.setMotors(70, -70);
 	}
 	
 	public void stop() {
-		this.left.stop();
-		this.right.stop();
+		this.setMotors(0, 0);
 	}
 	
 	public NxtRobot(OutputStream out, 

@@ -209,11 +209,9 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
 		forwardButton.setOnTouchListener(new View.OnTouchListener() {
 			public boolean onTouch(View v, MotionEvent event) {
 			    if(event.getAction() == event.ACTION_DOWN) {
-					//v.setBackgroundColor(0xFF009900);
 					if (robot != null) robot.forward();
 				}	
 				if(event.getAction() == event.ACTION_UP) {
-					//v.setBackgroundColor(0xFF002299);
 					if(robot != null) robot.stop();
 				}	
 			    return true;	
@@ -224,11 +222,9 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
 		leftButton.setOnTouchListener(new View.OnTouchListener() {
 				public boolean onTouch(View v, MotionEvent event) {
 					if(event.getAction() == event.ACTION_DOWN) {
-						//v.setBackgroundColor(0xFF009900);
 						if (robot != null) robot.leftspin();
 					}	
 					if(event.getAction() == event.ACTION_UP) {
-						//v.setBackgroundColor(0xFF002299);
 						if(robot != null) robot.stop();
 					}	
 					return true;	
@@ -239,11 +235,9 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
 		rightButton.setOnTouchListener(new View.OnTouchListener() {
 				public boolean onTouch(View v, MotionEvent event) {
 					if(event.getAction() == event.ACTION_DOWN) {
-						//v.setBackgroundColor(0xFF009900);
 						if (robot != null) robot.rightspin();
 					}	
 					if(event.getAction() == event.ACTION_UP) {
-						//v.setBackgroundColor(0xFF002299);
 						if(robot != null) robot.stop();
 					}	
 					return true;	
