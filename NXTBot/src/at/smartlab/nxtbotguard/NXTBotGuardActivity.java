@@ -1,3 +1,5 @@
+
+
 package at.smartlab.nxtbotguard;
 
 import java.io.IOException;
@@ -41,9 +43,13 @@ import uk.co.shanksi.nxt.*;
 
 import android.net.wifi.*;
 import android.widget.*;
+import android.view.*;
 
 public class NXTBotGuardActivity extends Activity implements PreviewCallback, Callback {
 
+	private NxtRobot robot;
+	
+	
     final Camera camera = Camera.open();
     // Create a BroadcastReceiver for ACTION_FOUND
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
@@ -61,6 +67,8 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
 
                 if (device.getName().equals("NXT")) {
                     Log.d("NXT", "Ok device found:" + device.getName());
+					final ToggleButton bluetoothToggle = (ToggleButton) findViewById(R.id.bluetoothToggle);
+					bluetoothToggle.setText(device.getAddress());
                     Method m;
                     try {
                         m = device.getClass().getMethod("createRfcommSocket", new Class[]{int.class});
@@ -68,7 +76,7 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
                         socket.connect();
 						NxtBrick brick=new NxtBrick(socket.getOutputStream(), socket.getInputStream());
                         LocalHttpService.setNxt(brick);
-						NxtRobot robot = new NxtRobot(brick);
+						robot = new NxtRobot(brick);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -117,16 +125,6 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
     private BluetoothAdapter mBluetoothAdapter = null;
 
     private void doConnect() {
-//        NxtRobot mySimpleRobot = new NxtRobot("NXT", true);
-//        Motor m = new Motor(MotorPort.A);
-//        mySimpleRobot.addPart(m);
-//        m.setSpeed(5);
-//        m.forward();
-//        //delay(1000);
-//        m.stop();
-
-
-
 
         // find Bluetooth NXT
         Log.i("NXT", "About to start bluetooth");
@@ -207,7 +205,56 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
             }
         });
 
-
+        final Button forwardButton = (Button) findViewById(R.id.fwdButton);
+		forwardButton.setOnTouchListener(new View.OnTouchListener() {
+			public boolean onTouch(View v, MotionEvent event) {
+			    if(event.getAction() == event.ACTION_DOWN) {
+					//v.setBackgroundColor(0xFF009900);
+					if (robot != null) robot.forward();
+				}	
+				if(event.getAction() == event.ACTION_UP) {
+					//v.setBackgroundColor(0xFF002299);
+					if(robot != null) robot.stop();
+				}	
+			    return true;	
+			}
+		});
+		
+        final Button leftButton = (Button) findViewById(R.id.leftButton);
+		leftButton.setOnTouchListener(new View.OnTouchListener() {
+				public boolean onTouch(View v, MotionEvent event) {
+					if(event.getAction() == event.ACTION_DOWN) {
+						//v.setBackgroundColor(0xFF009900);
+						if (robot != null) robot.leftspin();
+					}	
+					if(event.getAction() == event.ACTION_UP) {
+						//v.setBackgroundColor(0xFF002299);
+						if(robot != null) robot.stop();
+					}	
+					return true;	
+				}
+			});
+		
+        final Button rightButton = (Button) findViewById(R.id.rightButton);
+		rightButton.setOnTouchListener(new View.OnTouchListener() {
+				public boolean onTouch(View v, MotionEvent event) {
+					if(event.getAction() == event.ACTION_DOWN) {
+						//v.setBackgroundColor(0xFF009900);
+						if (robot != null) robot.rightspin();
+					}	
+					if(event.getAction() == event.ACTION_UP) {
+						//v.setBackgroundColor(0xFF002299);
+						if(robot != null) robot.stop();
+					}	
+					return true;	
+				}
+			});
+		
+		
+		
+		
+		
+		
         final SurfaceView preview = (SurfaceView) findViewById(R.id.preView);
         previewHolder = preview.getHolder();
         previewHolder.addCallback(surfaceCallback);

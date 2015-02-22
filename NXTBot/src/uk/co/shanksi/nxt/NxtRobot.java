@@ -25,17 +25,31 @@ public class NxtRobot
 			this.left.setBrick(this.brick);
 			this.right.setBrick(this.brick);
 			
-			this.right.backward(true);
-			this.left.forward(true);
-
 			
-			delay(1000);
-			
-			this.left.stop();
-			this.right.stop();
 			
 		} catch(IOException ex) {}
 	}	
+	
+	public void forward() {
+		this.right.forward();
+		this.left.forward();
+	}
+	
+	
+	public void leftspin() {
+		this.right.forward();
+		this.left.backward();
+	}
+	
+	public void rightspin() {
+		this.right.backward();
+		this.left.forward();
+	}
+	
+	public void stop() {
+		this.left.stop();
+		this.right.stop();
+	}
 	
 	public NxtRobot(OutputStream out, 
 					InputStream in) {
