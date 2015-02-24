@@ -27,13 +27,14 @@ import android.hardware.Camera;
 import android.hardware.Camera.Parameters;
 import android.hardware.Camera.PreviewCallback;
 import android.hardware.Camera.Size;
+import android.hardware.*;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceHolder.Callback;
 import android.view.SurfaceView;
-import android.view.View;
+import android.view.*;
 import android.widget.TextView;
 
 import at.smartlab.lego.NxtBrick;
@@ -45,10 +46,22 @@ import android.net.wifi.*;
 import android.widget.*;
 import android.view.*;
 
-public class NXTBotGuardActivity extends Activity implements PreviewCallback, Callback {
-
-	private NxtRobot robot;
+public class NXTBotGuardActivity extends Activity implements PreviewCallback, Callback, SensorEventListener {
+    private Thread.UncaughtExceptionHandler t;
 	
+	private NxtRobot robot;
+	private TextView o;
+	private SensorManager mSensorManager;
+    private Sensor mAccelerometer;
+    private Sensor mMagnetometer;
+
+    private float[] mLastAccelerometer = new float[3];
+    private float[] mLastMagnetometer = new float[3];
+    private boolean mLastAccelerometerSet = false;
+    private boolean mLastMagnetometerSet = false;
+
+    private float[] mR = new float[9];
+    private float[] mOrientation = new float[3];
 	
     final Camera camera = Camera.open();
     // Create a BroadcastReceiver for ACTION_FOUND
@@ -83,16 +96,15 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
                 }
             }
         }
-
     };
+	
     SurfaceHolder.Callback surfaceCallback = new SurfaceHolder.Callback() {
         public void surfaceCreated(SurfaceHolder holder) {
             // no-op -- wait until surfaceChanged()
         }
 
         public void surfaceChanged(SurfaceHolder holder,
-                                   int format, int width,
-                                   int height) {
+                                   int format, int width,                            int height) {
             initPreview(width, height);
             startPreview();
         }
@@ -154,7 +166,11 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
 
         Log.i("NXT", "Starting");
 
-        SharedPreferences settings = getSharedPreferences("CAMPREFS", 0);
+		mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
+        mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        mMagnetometer = mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
+		
+		SharedPreferences settings = getSharedPreferences("CAMPREFS", 0);
         LocalHttpService.setPwd(settings.getString("pwd", ""));
 
 
@@ -233,20 +249,18 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
 		
         final Button rightButton = (Button) findViewById(R.id.rightButton);
 		rightButton.setOnTouchListener(new View.OnTouchListener() {
-				public boolean onTouch(View v, MotionEvent event) {
-					if(event.getAction() == event.ACTION_DOWN) {
-						if (robot != null) robot.rightspin();
-					}	
-					if(event.getAction() == event.ACTION_UP) {
-						if(robot != null) robot.stop();
-					}	
-					return true;	
-				}
-			});
+			public boolean onTouch(View v, MotionEvent event) {
+				if(event.getAction() == event.ACTION_DOWN) {
+					if (robot != null) robot.rightspin();
+				}	
+				if(event.getAction() == event.ACTION_UP) {
+					if(robot != null) robot.stop();
+				}	
+				return true;	
+			}
+		});
 		
-		
-		
-		
+		o = (TextView)findViewById(R.id.orientationView);
 		
 		
         final SurfaceView preview = (SurfaceView) findViewById(R.id.preView);
@@ -254,8 +268,6 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
         previewHolder.addCallback(surfaceCallback);
         previewHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
         camera.setPreviewCallback(this);
-
-
     }
 
     private void initPreview(int width, int height) {
@@ -264,7 +276,6 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     private void startPreview() {
@@ -337,5 +348,45 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
 
     public void surfaceDestroyed(SurfaceHolder holder) {
         // TODO Auto-generated method stub
+    }
+
+    protected void onResume() {
+        super.onResume();
+        mLastAccelerometerSet = false;
+        mLastMagnetometerSet = false;
+        mSensorManager.registerListener(this, mAccelerometer, SensorManager.SENSOR_DELAY_UI);
+        mSensorManager.registerListener(this, mMagnetometer, SensorManager.SENSOR_DELAY_UI);
+    }
+
+    protected void onPause() {
+        super.onPause();
+        mSensorManager.unregisterListener(this);
+    }
+
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+    }
+
+	private boolean lock = true;
+    public void onSensorChanged(SensorEvent event) {
+		try{
+		if(lock) {
+			lock=false;
+        if (event.sensor == mAccelerometer) {
+            System.arraycopy(event.values, 0, mLastAccelerometer, 0, event.values.length);
+            mLastAccelerometerSet = true;
+        } else if (event.sensor == mMagnetometer) {
+            System.arraycopy(event.values, 0, mLastMagnetometer, 0, event.values.length);
+            mLastMagnetometerSet = true;
+        }
+        if (mLastAccelerometerSet && mLastMagnetometerSet) {
+            SensorManager.getRotationMatrix(mR, null, mLastAccelerometer, mLastMagnetometer);
+           SensorManager.getOrientation(mR, mOrientation);
+			o.setText(String.format("Orientation: %f, %f, %f",
+									 mOrientation[0], mOrientation[1], mOrientation[2]));
+            Log.i("OrientationTestActivity", String.format("Orientation: %f, %f, %f",
+                                                           mOrientation[0], mOrientation[1], mOrientation[2]));
+        }
+		}}catch(Exception ex) {}
+		lock = true;
     }
 }

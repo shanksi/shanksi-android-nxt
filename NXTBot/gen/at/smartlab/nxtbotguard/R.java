@@ -23,6 +23,7 @@ public final class R {
         public static final int fwdButton=0x7f060009;
         public static final int httpToggle=0x7f060006;
         public static final int leftButton=0x7f060008;
+        public static final int orientationView=0x7f06000b;
         public static final int passlabel=0x7f060001;
         public static final int password=0x7f060002;
         public static final int preView=0x7f060000;

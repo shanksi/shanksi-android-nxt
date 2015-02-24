@@ -4,7 +4,6 @@
 	style="@android:style/Theme.Light.NoTitleBar"
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
-	android:background="#ffffff"
 	android:orientation="vertical">
 
 	<SurfaceView
@@ -23,8 +22,7 @@
 			android:layout_width="80dip"
 			android:layout_height="wrap_content"
 			android:text="Password"
-			android:textAppearance="?android:attr/textAppearanceMedium"
-			android:textColor="#000000"/>
+			android:textAppearance="?android:attr/textAppearanceMedium"/>
 
 		<EditText
 			android:id="@+id/password"
@@ -48,8 +46,7 @@
 			android:layout_height="wrap_content"
 			android:paddingRight="10dip"
 			android:text="Retype"
-			android:textAppearance="?android:attr/textAppearanceMedium"
-			android:textColor="#000000"/>
+			android:textAppearance="?android:attr/textAppearanceMedium"/>
 
 		<EditText
 			android:id="@+id/retype"
@@ -59,14 +56,14 @@
 			android:ems="10"
 			android:inputType="textPassword"/>
 
-	</LinearLayout>
+		<Button
+			android:id="@+id/saveButton"
+			android:layout_width="150dip"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:text="Save"/>
 
-	<Button
-		android:id="@+id/saveButton"
-		android:layout_width="150dip"
-		android:layout_height="wrap_content"
-		android:layout_gravity="center"
-		android:text="Save"/>
+	</LinearLayout>
 
 	<LinearLayout
 		android:layout_width="fill_parent"
@@ -120,6 +117,13 @@
 			android:id="@+id/rightButton"/>
 
 	</LinearLayout>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="Small Text"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_width="wrap_content"
+		android:id="@+id/orientationView"/>
 
 </LinearLayout>
 
