@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81eee50b-a7fb-408e-b5d3-dd03022b5b87" name="Default" comment="Motor Stuff">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/NXTBot/src/at/smartlab/lego/NxtBrick.java" afterPath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/NxtBrick.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/NxtRobot.java" afterPath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/NxtRobot.java" />
+    <list default="true" id="81eee50b-a7fb-408e-b5d3-dd03022b5b87" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/I2CSensor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/UltrasonicAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/UltrasonicListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/UltrasonicSensor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="shanksi-android-nxt.iws" />
@@ -105,11 +107,9 @@
       <file leaf-file-name="UltrasonicSensor.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/UltrasonicSensor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0043668123" vertical-offset="482" max-vertical-offset="4425">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#8441#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-0.08733624" vertical-offset="145" max-vertical-offset="4425">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -778,7 +778,11 @@
       <created>1424120030531</created>
       <updated>1424120030531</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Adding the Ultrasonic Thingy">
+      <created>1425115260960</created>
+      <updated>1425115260960</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -836,7 +840,8 @@
     <MESSAGE value="Deleting mistake" />
     <MESSAGE value="Tweaking" />
     <MESSAGE value="Motor Stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Motor Stuff" />
+    <MESSAGE value="Adding the Ultrasonic Thingy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding the Ultrasonic Thingy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1351,11 +1356,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/UltrasonicSensor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0043668123" vertical-offset="482" max-vertical-offset="4425">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#8441#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-0.08733624" vertical-offset="145" max-vertical-offset="4425">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
