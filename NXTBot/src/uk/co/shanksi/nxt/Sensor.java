@@ -76,7 +76,7 @@ public abstract class Sensor extends Part
 
   protected byte[] LSRead(byte portId)
   {
-    byte[] request = {DIRECT_COMMAND_REPLY, LS_READ, portId};
+    byte[] request = {CommandType.DIRECT_COMMAND_REPLY, NxtCommand.LS_READ, portId};
     byte[] reply = brick.requestData(request);
 
     if (reply == null)  // Error
@@ -94,7 +94,7 @@ public abstract class Sensor extends Part
 
   protected void LSWrite(byte portId, byte[] txData, byte rxDataLength)
   {
-    byte[] request = {DIRECT_COMMAND_NOREPLY, LS_WRITE, portId, (byte)txData.length, rxDataLength};
+    byte[] request = {CommandType.DIRECT_COMMAND_NOREPLY, NxtCommand.LS_WRITE, portId, (byte)txData.length, rxDataLength};
     request = appendBytes(request, txData);
     robot.sendData(request);
   }

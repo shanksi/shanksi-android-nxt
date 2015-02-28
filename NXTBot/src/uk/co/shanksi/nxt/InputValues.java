@@ -9,7 +9,7 @@ It is Open Source Free Software, so you may
 However the use of the code is entirely your responsibility.
 */
 
-package uk.co.shanks.nxt;
+package uk.co.shanksi.nxt;
 
 import uk.co.shanksi.nxt.platform.DebugConsole;
 
