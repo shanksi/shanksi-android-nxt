@@ -139,7 +139,51 @@ public class NxtBrick {
 	catch(IOException ex) {}
     }
 
-public synchronized byte[] requestData(byte[] request)
+    /**
+     * Reads the data returned as a reply from the brick.
+     * @return the brick's reply
+     */
+    public synchronized byte[] readData()
+    {
+        byte[] reply = null;
+        int length = -1;
+        int lenMSB;
+        int lenLSB;
+
+        try
+        {
+            do
+                lenLSB = is.read();
+            while (lenLSB < 0);
+
+            lenMSB
+                    = is.read(); // MSB of reply length
+            length
+                    = (0xFF & lenLSB) | ((0xFF & lenMSB) << 8);
+
+            reply
+                    = new byte[length];
+            // Rest of packet
+            is.read(reply);
+        }
+        catch (IOException ex)
+        {
+//      System.out.println("read error");
+        }
+
+        if (debugLevel == DEBUG_LEVEL_HIGH)
+        {
+ /*     DebugConsole.show("DEBUG: readData() returned:");
+      for (int i = 0; i
+        < reply.length; i++)
+        DebugConsole.show("  " + reply[i]);
+    */}
+
+        return reply;
+    }
+
+
+    public synchronized byte[] requestData(byte[] request)
 {
 try{	
 	sendMessage(request);} 
