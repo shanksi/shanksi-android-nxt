@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81eee50b-a7fb-408e-b5d3-dd03022b5b87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/platform/DebugConsole.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Sensor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/I2CSensor.java" afterPath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/I2CSensor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/UltrasonicSensor.java" afterPath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/UltrasonicSensor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/platform/NxtThread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="shanksi-android-nxt.iws" />
@@ -32,20 +29,8 @@
       <file leaf-file-name="NxtBrick.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/NxtBrick.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2250">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2250">
               <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UltrasonicAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/UltrasonicAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6" vertical-offset="30" max-vertical-offset="660">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -54,7 +39,7 @@
       <file leaf-file-name="UltrasonicSensor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/UltrasonicSensor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.6" vertical-offset="145" max-vertical-offset="4425">
+            <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="4560">
               <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
@@ -64,26 +49,32 @@
       <file leaf-file-name="Sensor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Sensor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.32" vertical-offset="982" max-vertical-offset="1560">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1245" max-vertical-offset="1740">
               <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DebugConsole.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/platform/DebugConsole.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.4" vertical-offset="0" max-vertical-offset="435">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
-                <element signature="e#0#2569#0" expanded="true" />
+                <element signature="e#0#782#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DebugConsole.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/platform/DebugConsole.java">
+      <file leaf-file-name="NxtThread.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/platform/NxtThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6157205" vertical-offset="3" max-vertical-offset="525">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.52401745" vertical-offset="0" max-vertical-offset="570">
+              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
               <folding>
-                <element signature="e#0#782#0" expanded="true" />
-                <element signature="e#647#648#0" expanded="true" />
-                <element signature="e#680#681#0" expanded="true" />
-                <element signature="e#745#746#0" expanded="true" />
-                <element signature="e#778#779#0" expanded="true" />
+                <element signature="e#0#842#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,11 +83,9 @@
       <file leaf-file-name="Part.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Part.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="735">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#1146#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,11 +93,9 @@
       <file leaf-file-name="I2CSensor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/I2CSensor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.12" vertical-offset="2137" max-vertical-offset="2655">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2700" max-vertical-offset="2790">
               <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#5296#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -116,7 +103,7 @@
       <file leaf-file-name="CommandType.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/CommandType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="240">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
               <caret line="0" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="26" />
               <folding />
             </state>
@@ -126,11 +113,9 @@
       <file leaf-file-name="NxtRobot.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/NxtRobot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.4" vertical-offset="0" max-vertical-offset="1200">
+            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1350">
               <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -138,12 +123,9 @@
       <file leaf-file-name="SensorPort.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/SensorPort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.6" vertical-offset="185" max-vertical-offset="720">
+            <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="765">
               <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding>
-                <element signature="e#1156#1157#0" expanded="false" />
-                <element signature="e#1192#1193#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -204,6 +186,7 @@
         <option value="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/NxtRobot.java" />
         <option value="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Sensor.java" />
         <option value="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/platform/DebugConsole.java" />
+        <option value="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/platform/NxtThread.java" />
       </list>
     </option>
   </component>
@@ -239,21 +222,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shanksi-android-nxt" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -408,8 +376,23 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane />
+      </pane>
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shanksi-android-nxt" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
     </panes>
   </component>
@@ -427,171 +410,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree">
-    <UpdateInfo date="Moments ago" ActionInfo="_Update">
-      <UpdatedFiles>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated from server" />
-          <option name="myStatusName" value="Changed on server" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CHANGED_ON_SERVER" />
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Updated" />
-            <option name="myStatusName" value="Changed" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="UPDATED" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/NXTBot.apk</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes.dex</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/lego/NxtBrick.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/lego/NxtBrick.dex</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000000.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000000.dex</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000001.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000001.dex</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000002.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000002.dex</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000003.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000003.dex</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000004.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000004.dex</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000005.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000005.dex</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity.dex</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/R$id.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/R$id.dex</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/R$layout.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/R$layout.dex</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/R$string.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/R$string.dex</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/R.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/R.dex</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/Motor.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/Motor.dex</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/NxtRobot.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/NxtRobot.dex</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/SharedConstants.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/SharedConstants.dex</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/resources.ap_</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/gen/at/smartlab/nxtbotguard/R.java</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/res/layout/main.xml</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/src/at/smartlab/lego/NxtBrick.java</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/src/at/smartlab/nxtbotguard/NXTBotGuardActivity.java</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/LegoRobot.java</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Motor.java</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/NxtRobot.java</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/SharedConstants.java</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Created" />
-            <option name="myStatusName" value="Created" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="CREATED" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000006.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000006.dex</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000007.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000007.dex</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000008.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/at/smartlab/nxtbotguard/NXTBotGuardActivity$100000008.dex</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/CommandType.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/CommandType.dex</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/RegulationMode.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/bin/classes2/uk/co/shanksi/nxt/RegulationMode.dex</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/res/layout/simple_control.xml</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/CommandType.java</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/RegulationMode.java</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Deleted" />
-            <option name="myStatusName" value="Deleted" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="true" />
-            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Restored" />
-            <option name="myStatusName" value="Will be restored" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="RESTORED" />
-          </FILE-GROUP>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Modified" />
-          <option name="myStatusName" value="Modified" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MODIFIED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Skipped" />
-          <option name="myStatusName" value="Skipped" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SKIPPED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with conflicts" />
-          <option name="myStatusName" value="Will be merged with conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_CONFLICTS" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with tree conflicts" />
-          <option name="myStatusName" value="Merged with tree conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with property conflicts" />
-          <option name="myStatusName" value="Will be merged with property conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged" />
-          <option name="myStatusName" value="Will be merged" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Not in repository" />
-          <option name="myStatusName" value="Not in repository" />
-          <option name="mySupportsDeletion" value="true" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UNKNOWN" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally added" />
-          <option name="myStatusName" value="Locally added" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_ADDED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally removed" />
-          <option name="myStatusName" value="Locally removed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_REMOVED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Switched" />
-          <option name="myStatusName" value="Switched" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SWITCHED" />
-        </FILE-GROUP>
-      </UpdatedFiles>
-    </UpdateInfo>
   </component>
   <component name="RunManager">
     <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
@@ -765,7 +583,11 @@
       <created>1425115890133</created>
       <updated>1425115890133</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Adding the Ultrasonic Thingy">
+      <created>1425116287975</created>
+      <updated>1425116287975</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -830,16 +652,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/NxtBrick.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1177" max-vertical-offset="2070">
-          <caret line="107" column="19" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Motor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3217" max-vertical-offset="6675">
@@ -860,23 +672,6 @@
             <element signature="e#9050#9051#0" expanded="false" />
             <element signature="e#11149#11150#0" expanded="false" />
             <element signature="e#11199#11200#0" expanded="false" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="false" signature="-1:-1" placeholder=" }" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="false" signature="-1:-1" placeholder=" { " />
-            <marker date="1425113137229" expanded="false" signature="-1:-1" placeholder=" }" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -916,7 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -924,7 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -932,7 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="225">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -940,7 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="120">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -956,9 +747,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="1455">
           <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -982,23 +771,6 @@
             <element signature="e#9050#9051#0" expanded="false" />
             <element signature="e#11149#11150#0" expanded="false" />
             <element signature="e#11199#11200#0" expanded="false" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="false" signature="-1:-1" placeholder=" }" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="false" signature="-1:-1" placeholder=" { " />
-            <marker date="1425113137229" expanded="false" signature="-1:-1" placeholder=" }" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1030,7 +802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1038,7 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1046,7 +816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="225">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1054,7 +823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="120">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1069,7 +837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1077,7 +844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1085,7 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="255">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1093,7 +858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="136">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1108,7 +872,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1116,7 +879,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1124,7 +886,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1139,7 +900,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1147,7 +907,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1155,7 +914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1163,7 +921,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="120">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1219,23 +976,6 @@
             <element signature="e#9050#9051#0" expanded="false" />
             <element signature="e#11149#11150#0" expanded="false" />
             <element signature="e#11199#11200#0" expanded="false" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="false" signature="-1:-1" placeholder=" }" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="false" signature="-1:-1" placeholder=" { " />
-            <marker date="1425113137229" expanded="false" signature="-1:-1" placeholder=" }" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1258,7 +998,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/UltrasonicAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6" vertical-offset="30" max-vertical-offset="660">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="660">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
@@ -1266,12 +1006,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/SensorPort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.6" vertical-offset="185" max-vertical-offset="720">
+        <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="765">
           <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="e#1156#1157#0" expanded="false" />
-            <element signature="e#1192#1193#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1285,11 +1022,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/I2CSensor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.12" vertical-offset="2137" max-vertical-offset="2655">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2700" max-vertical-offset="2790">
           <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#5296#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1297,25 +1032,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2250">
           <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/NxtRobot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.4" vertical-offset="0" max-vertical-offset="1200">
+        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1350">
           <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/UltrasonicSensor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6" vertical-offset="145" max-vertical-offset="4425">
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="4560">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
@@ -1325,32 +1056,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#1146#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Sensor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.32" vertical-offset="982" max-vertical-offset="1560">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1245" max-vertical-offset="1740">
           <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#2569#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/platform/DebugConsole.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6157205" vertical-offset="3" max-vertical-offset="525">
+        <state vertical-scroll-proportion="-11.4" vertical-offset="0" max-vertical-offset="435">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="e#0#782#0" expanded="true" />
-            <element signature="e#647#648#0" expanded="true" />
-            <element signature="e#680#681#0" expanded="true" />
-            <element signature="e#745#746#0" expanded="true" />
-            <element signature="e#778#779#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/platform/NxtThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52401745" vertical-offset="0" max-vertical-offset="570">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#842#0" expanded="true" />
           </folding>
         </state>
       </provider>
