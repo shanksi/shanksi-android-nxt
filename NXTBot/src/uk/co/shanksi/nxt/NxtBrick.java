@@ -1,4 +1,4 @@
-package at.smartlab.lego;
+package uk.co.shanksi.nxt;
 
 import java.io.IOException;
 import java.io.InputStream;

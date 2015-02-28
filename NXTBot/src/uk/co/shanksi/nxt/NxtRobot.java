@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import at.smartlab.lego.NxtBrick;
-
 public class NxtRobot
 {
 	private NxtBrick brick;
@@ -13,6 +11,8 @@ public class NxtRobot
 
 	private Motor left=new Motor(MotorPort.C);
 	private Motor right=new Motor(MotorPort.B);
+
+    private UltrasonicSensor ultrasonicSensor = new UltrasonicSensor(SensorPort.S4)
 	
     public NxtRobot(NxtBrick brick) {
 		this.brick = brick;
@@ -24,6 +24,8 @@ public class NxtRobot
 			
 			this.left.setBrick(this.brick);
 			this.right.setBrick(this.brick);
+
+
 			
 			
 			
