@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81eee50b-a7fb-408e-b5d3-dd03022b5b87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/I2CSensor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/UltrasonicAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/UltrasonicListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/UltrasonicSensor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/platform/DebugConsole.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Sensor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/I2CSensor.java" afterPath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/I2CSensor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/UltrasonicSensor.java" afterPath="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/UltrasonicSensor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="shanksi-android-nxt.iws" />
@@ -41,49 +41,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Motor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Motor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.52" vertical-offset="3532" max-vertical-offset="6855">
-              <caret line="280" column="14" selection-start-line="280" selection-start-column="14" selection-end-line="280" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#14531#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#2127#2128#0" expanded="false" />
-                <element signature="e#2156#2157#0" expanded="false" />
-                <element signature="e#6376#6377#0" expanded="false" />
-                <element signature="e#6398#6399#0" expanded="false" />
-                <element signature="e#7231#7232#0" expanded="false" />
-                <element signature="e#7256#7257#0" expanded="false" />
-                <element signature="e#8479#8480#0" expanded="false" />
-                <element signature="e#8508#8509#0" expanded="false" />
-                <element signature="e#8730#8731#0" expanded="false" />
-                <element signature="e#8994#8995#0" expanded="false" />
-                <element signature="e#9050#9051#0" expanded="false" />
-                <element signature="e#11149#11150#0" expanded="false" />
-                <element signature="e#11199#11200#0" expanded="false" />
-                <marker date="1425113137229" expanded="true" signature="2332:2492" placeholder="{...}" />
-                <marker date="1425113137229" expanded="true" signature="3496:3564" placeholder="{...}" />
-                <marker date="1425113137229" expanded="true" signature="3642:3786" placeholder="{...}" />
-                <marker date="1425113137229" expanded="true" signature="3791:4110" placeholder="/**...*/" />
-                <marker date="1425113137229" expanded="true" signature="4138:4314" placeholder="{...}" />
-                <marker date="1425113137229" expanded="true" signature="4360:4794" placeholder="{...}" />
-                <marker date="1425113137229" expanded="true" signature="4798:5118" placeholder="/**...*/" />
-                <marker date="1425113137229" expanded="true" signature="5147:5326" placeholder="{...}" />
-                <marker date="1425113137229" expanded="true" signature="5373:5806" placeholder="{...}" />
-                <marker date="1425113137229" expanded="false" signature="8763:8767" placeholder=" }" />
-                <marker date="1425113137229" expanded="true" signature="13259:13617" placeholder="/**...*/" />
-                <marker date="1425113137229" expanded="false" signature="13662:13671" placeholder=" { " />
-                <marker date="1425113137229" expanded="false" signature="13713:13717" placeholder=" }" />
-                <marker date="1425113137229" expanded="true" signature="13721:14223" placeholder="/**...*/" />
-                <marker date="1425113137229" expanded="true" signature="14289:14345" placeholder="{...}" />
-                <marker date="1425113137229" expanded="true" signature="14349:14444" placeholder="/**...*/" />
-                <marker date="1425113137229" expanded="true" signature="14475:14526" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UltrasonicAdapter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/UltrasonicAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -94,22 +51,52 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UltrasonicListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/UltrasonicListener.java">
+      <file leaf-file-name="UltrasonicSensor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/UltrasonicSensor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.12" vertical-offset="82" max-vertical-offset="600">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state vertical-scroll-proportion="1.6" vertical-offset="145" max-vertical-offset="4425">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UltrasonicSensor.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/UltrasonicSensor.java">
+      <file leaf-file-name="Sensor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Sensor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.08733624" vertical-offset="145" max-vertical-offset="4425">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="-3.32" vertical-offset="982" max-vertical-offset="1560">
+              <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#2569#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DebugConsole.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/platform/DebugConsole.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6157205" vertical-offset="3" max-vertical-offset="525">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#782#0" expanded="true" />
+                <element signature="e#647#648#0" expanded="true" />
+                <element signature="e#680#681#0" expanded="true" />
+                <element signature="e#745#746#0" expanded="true" />
+                <element signature="e#778#779#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Part.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Part.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="735">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#1146#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -157,16 +144,6 @@
                 <element signature="e#1156#1157#0" expanded="false" />
                 <element signature="e#1192#1193#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TonePlayer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/TonePlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6" vertical-offset="0" max-vertical-offset="2295">
-              <caret line="1" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -225,6 +202,8 @@
         <option value="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/I2CSensor.java" />
         <option value="$PROJECT_DIR$/NXTBot/src/at/smartlab/lego/NxtBrick.java" />
         <option value="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/NxtRobot.java" />
+        <option value="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Sensor.java" />
+        <option value="$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/platform/DebugConsole.java" />
       </list>
     </option>
   </component>
@@ -782,7 +761,11 @@
       <created>1425115260960</created>
       <updated>1425115260960</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Adding the Ultrasonic Thingy">
+      <created>1425115890133</created>
+      <updated>1425115890133</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -847,30 +830,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="225">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="120">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NXTBot/src/at/smartlab/nxtbotguard/NXTBotGuardActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="4590">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/NxtBrick.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1177" max-vertical-offset="2070">
@@ -901,23 +860,23 @@
             <element signature="e#9050#9051#0" expanded="false" />
             <element signature="e#11149#11150#0" expanded="false" />
             <element signature="e#11199#11200#0" expanded="false" />
-            <marker date="1425113137229" expanded="true" signature="2332:2492" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="3496:3564" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="3642:3786" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="3791:4110" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="4138:4314" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="4360:4794" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="4798:5118" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="5147:5326" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="5373:5806" placeholder="{...}" />
-            <marker date="1425113137229" expanded="false" signature="8763:8767" placeholder=" }" />
-            <marker date="1425113137229" expanded="true" signature="13259:13617" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="false" signature="13662:13671" placeholder=" { " />
-            <marker date="1425113137229" expanded="false" signature="13713:13717" placeholder=" }" />
-            <marker date="1425113137229" expanded="true" signature="13721:14223" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="14289:14345" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="14349:14444" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="14475:14526" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="false" signature="-1:-1" placeholder=" }" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1425113137229" expanded="false" signature="-1:-1" placeholder=" { " />
+            <marker date="1425113137229" expanded="false" signature="-1:-1" placeholder=" }" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1023,23 +982,23 @@
             <element signature="e#9050#9051#0" expanded="false" />
             <element signature="e#11149#11150#0" expanded="false" />
             <element signature="e#11199#11200#0" expanded="false" />
-            <marker date="1425113137229" expanded="true" signature="2332:2492" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="3496:3564" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="3642:3786" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="3791:4110" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="4138:4314" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="4360:4794" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="4798:5118" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="5147:5326" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="5373:5806" placeholder="{...}" />
-            <marker date="1425113137229" expanded="false" signature="8763:8767" placeholder=" }" />
-            <marker date="1425113137229" expanded="true" signature="13259:13617" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="false" signature="13662:13671" placeholder=" { " />
-            <marker date="1425113137229" expanded="false" signature="13713:13717" placeholder=" }" />
-            <marker date="1425113137229" expanded="true" signature="13721:14223" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="14289:14345" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="14349:14444" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="14475:14526" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="false" signature="-1:-1" placeholder=" }" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1425113137229" expanded="false" signature="-1:-1" placeholder=" { " />
+            <marker date="1425113137229" expanded="false" signature="-1:-1" placeholder=" }" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1260,23 +1219,23 @@
             <element signature="e#9050#9051#0" expanded="false" />
             <element signature="e#11149#11150#0" expanded="false" />
             <element signature="e#11199#11200#0" expanded="false" />
-            <marker date="1425113137229" expanded="true" signature="2332:2492" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="3496:3564" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="3642:3786" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="3791:4110" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="4138:4314" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="4360:4794" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="4798:5118" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="5147:5326" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="5373:5806" placeholder="{...}" />
-            <marker date="1425113137229" expanded="false" signature="8763:8767" placeholder=" }" />
-            <marker date="1425113137229" expanded="true" signature="13259:13617" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="false" signature="13662:13671" placeholder=" { " />
-            <marker date="1425113137229" expanded="false" signature="13713:13717" placeholder=" }" />
-            <marker date="1425113137229" expanded="true" signature="13721:14223" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="14289:14345" placeholder="{...}" />
-            <marker date="1425113137229" expanded="true" signature="14349:14444" placeholder="/**...*/" />
-            <marker date="1425113137229" expanded="true" signature="14475:14526" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="false" signature="-1:-1" placeholder=" }" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1425113137229" expanded="false" signature="-1:-1" placeholder=" { " />
+            <marker date="1425113137229" expanded="false" signature="-1:-1" placeholder=" }" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1425113137229" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1356,9 +1315,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/UltrasonicSensor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.08733624" vertical-offset="145" max-vertical-offset="4425">
+        <state vertical-scroll-proportion="1.6" vertical-offset="145" max-vertical-offset="4425">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Part.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#1146#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/Sensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.32" vertical-offset="982" max-vertical-offset="1560">
+          <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#2569#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NXTBot/src/uk/co/shanksi/nxt/platform/DebugConsole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6157205" vertical-offset="3" max-vertical-offset="525">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#782#0" expanded="true" />
+            <element signature="e#647#648#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#745#746#0" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
