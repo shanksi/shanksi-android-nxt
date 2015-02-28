@@ -122,10 +122,56 @@ public class NxtBrick {
 
 
 
+    public void setInputMode(int portId, int sensorType, int sensorMode)
+    {
+/*    if (debugLevel >= DEBUG_LEVEL_MEDIUM)
+      DebugConsole.show("DEBUG: setInputMode("
+        + portId + ", "
+        + sensorType + ", "
+        + sensorMode + ")");*/
+        byte[] request =
+                {
+                        CommandType.DIRECT_COMMAND_NOREPLY, NxtCommand.SET_INPUT_MODE, (byte)portId,
+                        (byte)sensorType, (byte)sensorMode
+                };
+        sendMessage(request);
+    }
 
 
+/**
+ * Reads the values from given a sensor port.
+ * @param portId the Id of the sensor port (0,..3)
+ */
+  public synchronized InputValues getInputValues(int portId)
+  {
+    byte[] request =
+    {
+      DIRECT_COMMAND_REPLY, GET_INPUT_VALUES, (byte)portId
+    };
+    InputValues inputValues = new InputValues();
+    byte[] reply = requestData(request);
+    if (reply != null)
+    {
+      inputValues.inputPort = reply[3];
+      // 0 is false, 1 is true.
+      inputValues.valid = (reply[4] != 0);
+      // 0 is false, 1 is true.
+      inputValues.isCalibrated = (reply[5] == 0);
+      inputValues.sensorType = reply[6];
+      inputValues.sensorMode = reply[7];
+      inputValues.rawADValue = (0xFF & reply[8]) | ((0xFF & reply[9]) << 8);
+      inputValues.normalizedADValue = (0xFF & reply[10]) | ((0xFF & reply[11]) << 8);
+      inputValues.scaledValue = (short)((0xFF & reply[12]) | (reply[13] << 8));
+      inputValues.calibratedValue = (short)((0xFF & reply[14]) | (reply[15] << 8));
+      if (debugLevel >= DEBUG_LEVEL_MEDIUM)
+      {
+        DebugConsole.show("DEBUG: getInputValues() returned:");
+        inputValues.printValues();
+      }
+    }
 
-
+    return inputValues;
+  }
 
 
 
