@@ -12,9 +12,9 @@
  - improve the code and release your improvements to the public
  However the use of the code is entirely your responsibility.
  */
-package uk.co.shanksi.nxt;;
+package uk.co.shanksi.nxt;
 
-// import ch.aplu.nxt.platform.*;
+import uk.co.shanksi.nxt.platform.*;
 
 /**
  * A sensor wrapper to allow easy access to I2C sensors, like the ultrasonic sensor.
@@ -171,10 +171,10 @@ public class I2CSensor extends Sensor implements SharedConstants
 
   private void checkConnect()
   {
-    if (robot == null)
-      new ShowError("I2CSensor (port: " + getPortLabel()
-        + ") is not a part of the NxtRobot.\n"
-        + "Call addPart() to assemble it.");
+   // if (robot == null)
+   //   new ShowError("I2CSensor (port: " + getPortLabel()
+     //   + ") is not a part of the NxtRobot.\n"
+       // + "Call addPart() to assemble it.");
  }
 
 }

@@ -12,7 +12,7 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
 import android.widget.Toast;
-import at.smartlab.lego.NxtBrick;
+import uk.co.shanksi.nxt.NxtBrick;
 
 
 public class LocalHttpService extends Service {

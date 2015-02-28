@@ -32,7 +32,7 @@ import android.content.res.AssetManager;
 import android.graphics.Rect;
 import android.graphics.YuvImage;
 import android.util.Log;
-import at.smartlab.lego.NxtBrick;
+import uk.co.shanksi.nxt.NxtBrick;
 import at.smartlab.nxtbotguard.httpservice.LocalHttpService;
 
 /**

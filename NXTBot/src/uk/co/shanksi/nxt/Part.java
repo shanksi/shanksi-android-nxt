@@ -13,7 +13,7 @@ However the use of the code is entirely your responsibility.
 
 package uk.co.shanksi.nxt;
 
-import at.smartlab.lego.NxtBrick;
+import uk.co.shanksi.nxt.NxtBrick;
 
 /**
  * Abstract class as ancestor of all parts.

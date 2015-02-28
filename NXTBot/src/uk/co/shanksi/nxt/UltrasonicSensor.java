@@ -14,7 +14,7 @@
  */
 package uk.co.shanksi.nxt;
 
-//import ch.aplu.nxt.platform.*;
+import uk.co.shanksi.nxt.platform.*;
 //import java.awt.Color;
 
 /**

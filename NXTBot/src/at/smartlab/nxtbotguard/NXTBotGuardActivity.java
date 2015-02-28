@@ -37,7 +37,6 @@ import android.view.SurfaceView;
 import android.view.*;
 import android.widget.TextView;
 
-import at.smartlab.lego.NxtBrick;
 import at.smartlab.nxtbotguard.httpservice.LocalHttpService;
 
 import uk.co.shanksi.nxt.*;
