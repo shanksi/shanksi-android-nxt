@@ -51,8 +51,8 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
 	private NxtRobot robot;
 	private TextView o;
 	private SensorManager mSensorManager;
-    private Sensor mAccelerometer;
-    private Sensor mMagnetometer;
+    private android.hardware.Sensor mAccelerometer;
+    private android.hardware.Sensor mMagnetometer;
 
     private float[] mLastAccelerometer = new float[3];
     private float[] mLastMagnetometer = new float[3];
@@ -166,8 +166,8 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
         Log.i("NXT", "Starting");
 
 		mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
-        mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        mMagnetometer = mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
+        mAccelerometer = mSensorManager.getDefaultSensor(android.hardware.Sensor.TYPE_ACCELEROMETER);
+        mMagnetometer = mSensorManager.getDefaultSensor(android.hardware.Sensor.TYPE_MAGNETIC_FIELD);
 		
 		SharedPreferences settings = getSharedPreferences("CAMPREFS", 0);
         LocalHttpService.setPwd(settings.getString("pwd", ""));
@@ -362,7 +362,7 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
         mSensorManager.unregisterListener(this);
     }
 
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+    public void onAccuracyChanged(android.hardware.Sensor sensor, int accuracy) {
     }
 
 	private boolean lock = true;

@@ -51,26 +51,26 @@ public abstract class Sensor extends Part
 
   protected boolean readBooleanValue()
   {
-    InputValues vals = robot.getInputValues(portId);
+    InputValues vals = brick.getInputValues(portId);
     // I thought open sensor would produce 0 value. My UWORD conversion wrong?
     return (vals.rawADValue < 500);
   }
 
   protected int readRawValue()
   {
-    InputValues vals = robot.getInputValues(portId);
+    InputValues vals = brick.getInputValues(portId);
     return vals.rawADValue;
   }
 
   protected int readNormalizedValue()
   {
-    InputValues vals = robot.getInputValues(portId);
+    InputValues vals = brick.getInputValues(portId);
     return vals.normalizedADValue;
   }
 
   protected int readScaledValue()
   {
-    InputValues vals = robot.getInputValues(portId);
+    InputValues vals = brick.getInputValues(portId);
     return vals.scaledValue;
   }
 

@@ -134,10 +134,18 @@ public class NxtBrick {
                         CommandType.DIRECT_COMMAND_NOREPLY, NxtCommand.SET_INPUT_MODE, (byte)portId,
                         (byte)sensorType, (byte)sensorMode
                 };
-        sendMessage(request);
+				try{
+        sendMessage(request);} 
+	catch(IOException ex) {}
     }
 
-
+public synchronized byte[] requestData(byte[] request)
+{
+try{	
+	sendMessage(request);} 
+catch(IOException ex) {}
+	return readData();
+}
 /**
  * Reads the values from given a sensor port.
  * @param portId the Id of the sensor port (0,..3)
@@ -146,7 +154,7 @@ public class NxtBrick {
   {
     byte[] request =
     {
-      DIRECT_COMMAND_REPLY, GET_INPUT_VALUES, (byte)portId
+      CommandType.DIRECT_COMMAND_REPLY, NxtCommand.GET_INPUT_VALUES, (byte)portId
     };
     InputValues inputValues = new InputValues();
     byte[] reply = requestData(request);
@@ -163,11 +171,11 @@ public class NxtBrick {
       inputValues.normalizedADValue = (0xFF & reply[10]) | ((0xFF & reply[11]) << 8);
       inputValues.scaledValue = (short)((0xFF & reply[12]) | (reply[13] << 8));
       inputValues.calibratedValue = (short)((0xFF & reply[14]) | (reply[15] << 8));
-      if (debugLevel >= DEBUG_LEVEL_MEDIUM)
-      {
-        DebugConsole.show("DEBUG: getInputValues() returned:");
-        inputValues.printValues();
-      }
+      //if (debugLevel >= DEBUG_LEVEL_MEDIUM)
+      //{
+      //  DebugConsole.show("DEBUG: getInputValues() returned:");
+      //  inputValues.printValues();
+      //}
     }
 
     return inputValues;
