@@ -20,6 +20,8 @@ public final class R {
     }
     public static final class id {
         public static final int bluetoothToggle=0x7f060007;
+        public static final int distanceButton=0x7f06000c;
+        public static final int distanceView=0x7f06000d;
         public static final int fwdButton=0x7f060009;
         public static final int httpToggle=0x7f060006;
         public static final int leftButton=0x7f060008;

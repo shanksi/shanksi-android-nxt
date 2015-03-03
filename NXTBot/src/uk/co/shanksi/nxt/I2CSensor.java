@@ -92,6 +92,7 @@ public class I2CSensor extends Sensor implements SharedConstants
     };
     LSWrite(portId, txData, (byte)length);
     byte[] result = LSRead(portId);
+	//byte[] result = {0x00, 0x12, 0x14};	
     return result;
   }
 

@@ -15,11 +15,14 @@ However the use of the code is entirely your responsibility.
 
 package uk.co.shanksi.nxt.platform;
 
+import android.util.Log;
+
 public class DebugConsole 
 {
   public static void show(String msg)
   {
     System.out.println(msg);
+	Log.d("NXT", msg);
   }
 
   public static void showTimed(String msg, int displayTime)

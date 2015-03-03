@@ -18,8 +18,8 @@ public class NxtRobot
 	
     public NxtRobot(NxtBrick brick) {
 		this.brick = brick;
-		this.tonePlayer = new TonePlayer();
-		this.tonePlayer.setBrick(this.brick);	
+		this.tonePlayer = (TonePlayer)addPart(new TonePlayer());
+		//this.tonePlayer.setBrick(this.brick);	
         try {
 		    this.tonePlayer.playConnectMelody();
 			
@@ -28,11 +28,17 @@ public class NxtRobot
 			this.right.setBrick(this.brick);
 
 
-			
+			this.ultrasonicSensor.setBrick(this.brick);
 			
 			
 		} catch(IOException ex) {}
 	}	
+	
+	public Part addPart(Part part) {
+		part.setBrick(this.brick);
+		return part;
+	}
+	
 	
 	public void setMotors(int left,int right) {
     	this.left.setSpeed(left);
@@ -44,8 +50,7 @@ public class NxtRobot
 	
 	public void forward() {
 		this.setMotors(70, 70);
-	}
-	
+	}	
 	
 	public void leftspin() {
 		this.setMotors(-70, 70);
@@ -57,6 +62,10 @@ public class NxtRobot
 	
 	public void stop() {
 		this.setMotors(0, 0);
+	}
+	
+	public int distance() {
+		return this.ultrasonicSensor.getDistance();
 	}
 	
 	public NxtRobot(OutputStream out, 

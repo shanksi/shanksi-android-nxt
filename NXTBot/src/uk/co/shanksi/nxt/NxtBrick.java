@@ -32,38 +32,6 @@ public class NxtBrick {
 	//	} catch (IOException ex) {}
 		}
 	
-	/**
-	 * Play a tone on the Nxt brick.
-	 *
-	 * @param frequency 
-	 * @param msec duration 
-	 */
-	public void playTone(char f, char msec) 
-			throws IOException {
-		byte [] msg = new byte [6];
-		msg[0] = (byte)0x80;
-		msg[1] = (byte)0x03;
-		msg[2] = (byte)(f & 0xff);
-		msg[3] = (byte)((f >> 8) & 0xff);
-		msg[4] = (byte)(msec & 0xff);
-		msg[5] = (byte)((msec >> 8) & 0xff);
-		sendMessage(msg);
-	}
-
-    public void sayHello()
-            throws IOException {
-        byte [] msg = new byte [6];
-        msg[0] = (byte)0x80;
-        msg[1] = (byte)0x09;
-        msg[2] = (byte)0x00; // Inbox number
-        msg[3] = (byte)0x05; // 5 chars
-        msg[4] = (byte)0x48; // H
-        msg[5] = (byte)0x65; // e
-        msg[6] = (byte)0x6c; // l
-        msg[7] = (byte)0x6c; // l
-        msg[8] = (byte)0x6f; // o
-        sendMessage(msg);
-    }
 
 
 
@@ -100,23 +68,23 @@ public class NxtBrick {
         + turnRatio + ", "
         + runState + ", "
         + tachoLimit + ")");*/
-        byte[] request =
-                {
-			            CommandType.DIRECT_COMMAND_NOREPLY, 
-						NxtCommand.SET_OUTPUT_STATE, 
-						(byte)portId,
-                        power, 
-						(byte)mode, 
-						(byte)regulationMode,
-                        (byte)turnRatio, 
-						(byte)runState, 
-						(byte)tachoLimit,
-                        (byte)(tachoLimit >>> 8), 
-						(byte)(tachoLimit >>> 16),
-                        (byte)(tachoLimit >>> 24)
-                };
-				try {
-        sendMessage(request);} 
+        byte[] request = {
+	        CommandType.DIRECT_COMMAND_NOREPLY, 
+			NxtCommand.SET_OUTPUT_STATE, 
+			(byte)portId,
+            power, 
+			(byte)mode, 
+			(byte)regulationMode,
+            (byte)turnRatio, 
+			(byte)runState, 
+			(byte)tachoLimit,
+            (byte)(tachoLimit >>> 8), 
+			(byte)(tachoLimit >>> 16),
+			(byte)(tachoLimit >>> 24)
+        };
+		try {
+            sendMessage(request);
+		} 
 		catch(IOException ex) {}
     }
 
@@ -153,31 +121,28 @@ public class NxtBrick {
         try
         {
             do
-                lenLSB = is.read();
+                lenLSB = in.read();
             while (lenLSB < 0);
 
-            lenMSB
-                    = is.read(); // MSB of reply length
-            length
-                    = (0xFF & lenLSB) | ((0xFF & lenMSB) << 8);
+            lenMSB = in.read(); // MSB of reply length
+            length = (0xFF & lenLSB) | ((0xFF & lenMSB) << 8);
 
-            reply
-                    = new byte[length];
+            reply = new byte[length];
             // Rest of packet
-            is.read(reply);
+            in.read(reply);
         }
         catch (IOException ex)
         {
 //      System.out.println("read error");
         }
 
-        if (debugLevel == DEBUG_LEVEL_HIGH)
-        {
+      //  if (debugLevel == DEBUG_LEVEL_HIGH)
+    //    {
  /*     DebugConsole.show("DEBUG: readData() returned:");
       for (int i = 0; i
         < reply.length; i++)
         DebugConsole.show("  " + reply[i]);
-    */}
+    *///}
 
         return reply;
     }
@@ -211,10 +176,10 @@ catch(IOException ex) {}
       inputValues.isCalibrated = (reply[5] == 0);
       inputValues.sensorType = reply[6];
       inputValues.sensorMode = reply[7];
-      inputValues.rawADValue = (0xFF & reply[8]) | ((0xFF & reply[9]) << 8);
-      inputValues.normalizedADValue = (0xFF & reply[10]) | ((0xFF & reply[11]) << 8);
-      inputValues.scaledValue = (short)((0xFF & reply[12]) | (reply[13] << 8));
-      inputValues.calibratedValue = (short)((0xFF & reply[14]) | (reply[15] << 8));
+      inputValues.rawADValue = (reply[8]) | ((reply[9]) << 8);
+      inputValues.normalizedADValue = (reply[10]) | ((reply[11]) << 8);
+      inputValues.scaledValue = (short)((reply[12]) | (reply[13] << 8));
+      inputValues.calibratedValue = (short)((reply[14]) | (reply[15] << 8));
       //if (debugLevel >= DEBUG_LEVEL_MEDIUM)
       //{
       //  DebugConsole.show("DEBUG: getInputValues() returned:");

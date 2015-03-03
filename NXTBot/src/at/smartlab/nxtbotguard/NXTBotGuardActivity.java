@@ -227,7 +227,7 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
 					if (robot != null) robot.forward();
 				}	
 				if(event.getAction() == event.ACTION_UP) {
-					if(robot != null) robot.stop();
+					if(robot != null) {robot.stop();bluetoothToggle.setText( Integer.toString(robot.distance()));}
 				}	
 			    return true;	
 			}
@@ -260,6 +260,23 @@ public class NXTBotGuardActivity extends Activity implements PreviewCallback, Ca
 		});
 		
 		o = (TextView)findViewById(R.id.orientationView);
+		
+	  final TextView distanceDisplay = (TextView) findViewById(R.id.distanceView);
+      final Button distanceButton = (Button) findViewById(R.id.distanceButton);
+		distanceButton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+			if(robot != null){
+				distanceDisplay.setText("Checking....");
+				
+				Log.d("Distance", "Getting Distance");
+				int distance = robot.distance();
+				Log.d("Distance", Integer.toString(distance));
+			    distanceDisplay.setText(Integer.toString(distance));
+			}   	
+			}
+		});
+				
+		
 		
 		
         final SurfaceView preview = (SurfaceView) findViewById(R.id.preView);

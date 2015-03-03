@@ -170,12 +170,16 @@ public class UltrasonicSensor extends I2CSensor
 
   private int getDistance(boolean check)
   {
+	  
     if (check)
       checkConnect();
     byte[] val = getData(BYTE0, 1);
     if (val == null)
       return 255;  // Illegal mesurement
     return 0xFF & val[0]; // Convert signed byte to unsigned (positive only)
+
+
+//return 23;
   }
 
   private int getLevel()
@@ -192,7 +196,7 @@ public class UltrasonicSensor extends I2CSensor
   public int getDistance()
   {
     delay(10);
-    return getDistance(true);
+    return getDistance(false);
   }
 
   /**

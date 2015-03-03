@@ -12,6 +12,7 @@ However the use of the code is entirely your responsibility.
 */
 
 package uk.co.shanksi.nxt;
+import java.io.*;
 
 // import ch.aplu.nxt.platform.ShowError;
 
@@ -94,9 +95,20 @@ public abstract class Sensor extends Part
 
   protected void LSWrite(byte portId, byte[] txData, byte rxDataLength)
   {
-    byte[] request = {CommandType.DIRECT_COMMAND_NOREPLY, NxtCommand.LS_WRITE, portId, (byte)txData.length, rxDataLength};
+    byte[] request = {
+		CommandType.DIRECT_COMMAND_NOREPLY, 
+		NxtCommand.LS_WRITE, 
+		portId, 
+		(byte)txData.length, 
+		rxDataLength
+	};
     request = appendBytes(request, txData);
-    robot.sendData(request);
+	try {
+        brick.sendMessage(request);
+	} catch(IOException ex) {
+		// really should consider doing sonething here
+	}
+	//robot.sendData(request);
   }
 
   private byte[] appendBytes(byte[] array1, byte[] array2)
