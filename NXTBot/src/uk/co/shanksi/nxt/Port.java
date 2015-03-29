@@ -1,4 +1,4 @@
-// MotorPort.java
+// Port.java
 
 /*
 This software is part of the NxtJLib library.
@@ -14,7 +14,7 @@ However the use of the code is entirely your responsibility.
 package uk.co.shanksi.nxt;
 
 /**
- * Useful declarations for motor port connections.
+ * Useful declarations for port connections.
  */
 public class Port
 {

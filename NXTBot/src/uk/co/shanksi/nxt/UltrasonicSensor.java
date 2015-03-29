@@ -136,8 +136,8 @@ public class UltrasonicSensor extends I2CSensor
   {
     super(port, LOWSPEED_9V);
     ust = new UltrasonicSensorThread();
-    NxtProperties props = LegoRobot.getProperties();
-    pollDelay = props.getIntValue("UltrasonicSensorPollDelay");
+    //NxtProperties props = LegoRobot.getProperties();
+    pollDelay = 500; //props.getIntValue("UltrasonicSensorPollDelay");
   }
 
   /**
@@ -153,7 +153,8 @@ public class UltrasonicSensor extends I2CSensor
     checkConnect();
     sendData(COMMAND_STATE, modeEnumeration);
   }
-
+  
+  
   protected void init()
   {
     setSensorMode(CONTINUOUS_MEASUREMENT);

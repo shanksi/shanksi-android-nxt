@@ -91,6 +91,7 @@ public class I2CSensor extends Sensor implements SharedConstants
       DEFAULT_ADDRESS, register
     };
     LSWrite(portId, txData, (byte)length);
+	delay(500);
     byte[] result = LSRead(portId);
 	//byte[] result = {0x00, 0x12, 0x14};	
     return result;

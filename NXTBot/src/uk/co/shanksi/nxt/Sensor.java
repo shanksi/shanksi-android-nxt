@@ -77,7 +77,11 @@ public abstract class Sensor extends Part
 
   protected byte[] LSRead(byte portId)
   {
-    byte[] request = {CommandType.DIRECT_COMMAND_REPLY, NxtCommand.LS_READ, portId};
+    byte[] request = {
+		CommandType.DIRECT_COMMAND_REPLY, 
+		NxtCommand.LS_READ, 
+		portId
+	};
     byte[] reply = brick.requestData(request);
 
     if (reply == null)  // Error

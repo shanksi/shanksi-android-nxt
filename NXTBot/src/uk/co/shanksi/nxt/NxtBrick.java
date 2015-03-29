@@ -1,5 +1,10 @@
 package uk.co.shanksi.nxt;
 
+import android.util.Log;
+
+
+
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -120,8 +125,10 @@ public class NxtBrick {
 
         try
         {
-            do
+            do {
                 lenLSB = in.read();
+				Log.v("NXTRead", Integer.toString(lenLSB));
+				}
             while (lenLSB < 0);
 
             lenMSB = in.read(); // MSB of reply length
@@ -163,7 +170,9 @@ catch(IOException ex) {}
   {
     byte[] request =
     {
-      CommandType.DIRECT_COMMAND_REPLY, NxtCommand.GET_INPUT_VALUES, (byte)portId
+      CommandType.DIRECT_COMMAND_REPLY, 
+	  NxtCommand.GET_INPUT_VALUES, 
+	  (byte)portId
     };
     InputValues inputValues = new InputValues();
     byte[] reply = requestData(request);

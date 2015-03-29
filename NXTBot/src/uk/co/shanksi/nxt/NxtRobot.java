@@ -11,8 +11,8 @@ public class NxtRobot
 	private NxtBrick brick;
 	private TonePlayer tonePlayer;
 
-	private Motor left=new Motor(MotorPort.C);
-	private Motor right=new Motor(MotorPort.B);
+	private Motor left;
+	private Motor right;
 
     private UltrasonicSensor ultrasonicSensor = new UltrasonicSensor(SensorPort.S4);
 	
@@ -24,11 +24,12 @@ public class NxtRobot
 		    this.tonePlayer.playConnectMelody();
 			
 			
-			this.left.setBrick(this.brick);
-			this.right.setBrick(this.brick);
 
+        	this.left=(Motor)addPart(new Motor(MotorPort.C));
+	        this.right=(Motor)addPart(new Motor(MotorPort.B));		
 
 			this.ultrasonicSensor.setBrick(this.brick);
+			this.ultrasonicSensor.init();
 			
 			
 		} catch(IOException ex) {}
@@ -65,7 +66,9 @@ public class NxtRobot
 	}
 	
 	public int distance() {
+		
 		return this.ultrasonicSensor.getDistance();
+		
 	}
 	
 	public NxtRobot(OutputStream out, 
