@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Lego NXT</string>
+    <string name="openconnection_button">Open Connection</string>
+    <string name="btStatusTextDefault">Unknown</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="batteryIndicatorLabelText">Battery</string>
+    <string name="ColorLabelTextR">Red</string>
+    <string name="ColorLabelTextG">Green</string>
+    <string name="ColorLabelTextB">Blue</string>
+    <string name="indicatorDefaultValue">0</string>
+    <string name="light_level_label">Light Level</string>
+    <string name="lightsLabel">Lights</string>
+    <string name="distanceIndicatorLabelText">Distance</string>
+</resources>
