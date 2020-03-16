@@ -27,8 +27,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun configureButtons() {
-        val openConnectionButton = findViewById<Button>(R.id.openconnection_button)
-        openConnectionButton.setOnClickListener(clickListener)
+        openconnection_button.setOnClickListener(clickListener)
 
         // batteryIndicator = findViewById<TextView>(R.id.batteryIndicator)
     }

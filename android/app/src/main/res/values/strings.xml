@@ -3,8 +3,7 @@
     <string name="openconnection_button">Open Connection</string>
     <string name="btStatusTextDefault">Unknown</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="connectionStatusDefault">No connection</string>
     <string name="batteryIndicatorLabelText">Battery</string>
     <string name="ColorLabelTextR">Red</string>
     <string name="ColorLabelTextG">Green</string>
@@ -13,4 +12,5 @@
     <string name="light_level_label">Light Level</string>
     <string name="lightsLabel">Lights</string>
     <string name="distanceIndicatorLabelText">Distance</string>
+    <string name="connectLabel">Connection</string>
 </resources>
